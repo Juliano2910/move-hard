@@ -404,49 +404,54 @@ button { font: inherit; }
 
 .instagram-preview-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(3, minmax(300px, 340px));
+  gap: 2.5rem;
   margin-top: 4rem;
+  justify-content: center;
 }
 
 .instagram-phone {
   display: block;
-  max-width: 320px;
-  margin: 0 auto;
 }
 
 .phone-frame {
-  position: relative;
   width: 100%;
-  height: 600px;  /* ✅ Hauteur fixe qui marche partout */
+  height: 580px !important;  /* ✅ !important force la hauteur */
+  position: relative;
   border-radius: 44px;
   border: 1px solid rgba(255,255,255,0.12);
   background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
-  padding: 1.4rem;
+  padding: 18px;
   box-shadow: 0 32px 64px rgba(0,0,0,0.4);
-  transition: transform var(--transition);
+  transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+  overflow: visible;
 }
 
 .phone-frame:hover {
-  transform: scale(1.02) translateY(-4px);
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.5);
 }
 
 .phone-notch {
   position: absolute;
-  top: 1.2rem;
+  top: 16px;
   left: 50%;
   transform: translateX(-50%);
-  width: 42%;
-  height: 0.8rem;
+  width: 130px;
+  height: 8px;
   background: #000;
   border-radius: 999px;
+  z-index: 2;
 }
 
 .phone-screen {
   position: absolute;
-  inset: 1.4rem;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
   background: #000;
-  border-radius: 28px;
+  border-radius: 32px;
   border: 1px solid rgba(255,255,255,0.08);
   overflow: hidden;
 }
@@ -456,19 +461,32 @@ button { font: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(45deg, #8338ec, #3b82f6);
+  background: linear-gradient(135deg, #8338ec 0%, #3b82f6 50%, #10b981 100%);
   color: white;
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: clamp(1.3rem, 5vw, 1.8rem);
   text-align: center;
-  padding: 2rem;
+  padding: 2.5rem 1rem;
+  line-height: 1.1;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
+  .instagram-preview-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
   .instagram-preview-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
   }
+  
+  .phone-frame {
+    height: 500px !important;
+  }
+}
   
   .phone-frame {
     height: 520px;  /* Plus petit sur mobile */
