@@ -9,7 +9,7 @@ const translations = {
 
     heroEyebrow: 'Agence média sport',
     heroOverline: 'Un écosystème éditorial indépendant pour connecter les marques à de vraies communautés sportives.',
-    heroTitle: 'The media network for brands that want to move sport forward.',
+    heroTitle: 'Le sport, plus fort',
     heroTagline: 'Le sport, plus fort.',
     heroText: 'Move Hard est une agence média sport qui conçoit des contenus, des récits et des activations pour les marques qui veulent parler juste, fort et durablement dans l’univers du sport.',
     heroSupport: 'Propulsée par trois médias spécialisés : Trail Hard, Run Hard et Cycling Hard.',
