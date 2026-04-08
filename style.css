@@ -296,6 +296,21 @@ button { font: inherit; }
   letter-spacing: 0.03em;
 }
 
+.media-logo-wrap {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  margin: 0.85rem 0 1rem;
+}
+
+.media-logo-img {
+  max-height: 40px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
 .media-category {
   margin: 0.5rem 0 1rem;
 }
