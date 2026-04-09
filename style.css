@@ -730,3 +730,25 @@ button { font: inherit; }
     max-width: 100%;
   }
 }
+
+
+/* Blog page header - harmonisé avec le site principal */
+.blog-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,0.92);
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-4) var(--space-2);
+  min-height: 82px;
+}
+
+.blog-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  max-width: var(--max);
+  margin: 0 auto;
+}
