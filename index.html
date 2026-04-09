@@ -217,77 +217,50 @@
       </div>
     </section>
 
-  <section id="projects" class="section projects">
+<section id="projects" class="section projects">
   <div class="container">
     <div class="section-head reveal">
       <p class="eyebrow" data-i18n="projectsEyebrow">Projects</p>
       <h2 data-i18n="projectsTitle">Des collaborations qui prennent le sport au sérieux</h2>
       <p data-i18n="projectsIntro">
         Quelques exemples de campagnes, productions ou collaborations imaginées pour des marques,
-        événements ou acteurs de l’écosystème sport.
+        événements ou acteurs de l'écosystème sport.
       </p>
     </div>
 
-    <div class="projects-carousel reveal">
-      <button class="projects-nav projects-prev" type="button" aria-label="Projet précédent">
-        ←
-      </button>
-
-      <div class="projects-track-wrap">
-        <div class="projects-track" id="projectsTrack">
-          <article class="project-slide is-active">
-            <div class="project-slide-image">
-              <img src="projet1.jpg" alt="Projet trail et lancement produit" loading="lazy">
-            </div>
-            <div class="project-slide-content card">
-              <div class="project-number">01</div>
-              <h3>Campagne trail / lancement produit</h3>
-              <p>
-                Création d’un dispositif éditorial autour d’un lancement orienté trail,
-                avec contenus courts, narration athlète et diffusion ciblée.
-              </p>
-            </div>
-          </article>
-
-          <article class="project-slide">
-            <div class="project-slide-image">
-              <img src="projet2.jpg" alt="Projet de couverture événement running" loading="lazy">
-            </div>
-            <div class="project-slide-content card">
-              <div class="project-number">02</div>
-              <h3>Couverture d’événement running</h3>
-              <p>
-                Production de contenus avant, pendant et après course pour valoriser
-                un événement et maintenir son impact dans le temps.
-              </p>
-            </div>
-          </article>
-
-          <article class="project-slide">
-            <div class="project-slide-image">
-              <img src="projet3.jpg" alt="Projet d’activation média cyclisme" loading="lazy">
-            </div>
-            <div class="project-slide-content card">
-              <div class="project-number">03</div>
-              <h3>Activation média cyclisme</h3>
-              <p>
-                Mise en avant d’une marque ou d’un produit vélo via contenus dédiés,
-                angle éditorial et relais sur un média spécialisé.
-              </p>
-            </div>
-          </article>
+    <div class="projects-grid">
+      <article class="project-card project-visual-card reveal">
+        <div class="project-visual-image">
+          <img src="projet1.jpg" alt="Campagne trail lancement produit" loading="lazy">
         </div>
-      </div>
+        <div class="project-visual-overlay"></div>
+        <div class="project-visual-content">
+          <p class="project-visual-number">01</p>
+          <h3 data-i18n="project1Title">Campagne trail / lancement produit</h3>
+        </div>
+      </article>
 
-      <button class="projects-nav projects-next" type="button" aria-label="Projet suivant">
-        →
-      </button>
-    </div>
+      <article class="project-card project-visual-card reveal delay-1">
+        <div class="project-visual-image">
+          <img src="projet2.jpg" alt="Couverture événement running" loading="lazy">
+        </div>
+        <div class="project-visual-overlay"></div>
+        <div class="project-visual-content">
+          <p class="project-visual-number">02</p>
+          <h3 data-i18n="project2Title">Couverture d'événement running</h3>
+        </div>
+      </article>
 
-    <div class="projects-dots" aria-label="Navigation du carousel">
-      <button class="projects-dot is-active" type="button" data-slide="0" aria-label="Aller au projet 1"></button>
-      <button class="projects-dot" type="button" data-slide="1" aria-label="Aller au projet 2"></button>
-      <button class="projects-dot" type="button" data-slide="2" aria-label="Aller au projet 3"></button>
+      <article class="project-card project-visual-card reveal delay-2">
+        <div class="project-visual-image">
+          <img src="projet3.jpg" alt="Activation média cyclisme" loading="lazy">
+        </div>
+        <div class="project-visual-overlay"></div>
+        <div class="project-visual-content">
+          <p class="project-visual-number">03</p>
+          <h3 data-i18n="project3Title">Activation média cyclisme</h3>
+        </div>
+      </article>
     </div>
   </div>
 </section>
