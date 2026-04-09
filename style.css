@@ -962,3 +962,127 @@ button { font: inherit; }
   font-size: 0.78rem;
   color: rgba(255,255,255,0.78);
 }
+
+
+.projects-carousel {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.projects-track-wrap {
+  overflow: hidden;
+}
+
+.projects-track {
+  display: flex;
+  transition: transform 500ms cubic-bezier(.16,1,.3,1);
+  will-change: transform;
+}
+
+.project-slide {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.project-slide-image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 460px;
+  background: #000;
+}
+
+.project-slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 460px;
+}
+
+.project-slide-content h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.05;
+}
+
+.project-slide-content p {
+  color: var(--muted);
+  max-width: 32ch;
+}
+
+.projects-nav {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform var(--transition), background var(--transition), border-color var(--transition);
+}
+
+.projects-nav:hover {
+  transform: translateY(-2px);
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.projects-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.projects-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(0,0,0,0.18);
+  cursor: pointer;
+  transition: transform var(--transition), background var(--transition);
+}
+
+.projects-dot.is-active {
+  background: #000;
+  transform: scale(1.15);
+}
+
+@media (max-width: 980px) {
+  .project-slide {
+    grid-template-columns: 1fr;
+  }
+
+  .project-slide-image,
+  .project-slide-content {
+    min-height: auto;
+  }
+
+  .project-slide-image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .projects-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-nav {
+    display: none;
+  }
+}
