@@ -752,3 +752,30 @@ button { font: inherit; }
   max-width: var(--max);
   margin: 0 auto;
 }
+
+/* Hero centré */
+.hero-center {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.hero-center-title {
+  font-size: 1.1rem !important;
+  letter-spacing: 0.3em !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.hero-center-subtitle {
+  font-size: 1.25rem !important;
+  letter-spacing: 0.08em !important;
+  max-width: 800px !important;
+  margin: 0 auto 3rem !important;
+  line-height: 1.3 !important;
+}
+
+.hero-center-text {
+  font-size: 1.15rem !important;
+  max-width: 750px !important;
+  margin: 0 auto !important;
+}
