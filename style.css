@@ -1144,3 +1144,44 @@ button { font: inherit; }
     min-height: 360px;
   }
 }
+
+.who-we-reach {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 8vw, 6.5rem) !important;
+  font-weight: 900 !important;
+  line-height: 0.92 !important;
+  letter-spacing: 0.03em !important;
+  text-transform: uppercase !important;
+  margin: 0 0 3rem 0 !important;
+  color: var(--text) !important;
+}
+
+.audience-kicker {
+  margin: 0 !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(3rem, 8vw, 5.5rem) !important;
+  font-weight: 900 !important;
+  line-height: 0.92 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: uppercase !important;
+}
+
+.audience-card-content {
+  justify-content: center !important;
+  padding: 3rem 1.5rem !important;
+  text-align: center !important;
+}
+
+.trail-text { color: var(--trail-hard) !important; }
+.run-text { color: var(--run-hard) !important; }
+.cycling-text { color: var(--cycling-hard) !important; }
+
+@media (max-width: 980px) {
+  .who-we-reach {
+    font-size: clamp(2.8rem, 9vw, 4.5rem) !important;
+  }
+  
+  .audience-kicker {
+    font-size: clamp(2.6rem, 9vw, 4rem) !important;
+  }
+}
