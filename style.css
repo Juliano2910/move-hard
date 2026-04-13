@@ -195,21 +195,6 @@ button { font: inherit; }
   margin-top: 1rem;
 }
 
-.trail-text {
-  color: var(--trail-hard);
-  font-weight: 700;
-}
-
-.run-text {
-  color: var(--run-hard);
-  font-weight: 700;
-}
-
-.cycling-text {
-  color: var(--cycling-hard);
-  font-weight: 700;
-}
-
 .hero-actions,
 .contact-actions {
   display: flex;
@@ -1186,4 +1171,43 @@ button { font: inherit; }
   .audience-kicker {
     font-size: clamp(2.6rem, 9vw, 4rem) !important;
   }
+}
+
+/* === AUDIENCE CARDS - BLANC OBLIGATOIRE === */
+.audience-card .trail-text,
+.audience-card .run-text,
+.audience-card .cycling-text,
+.audience-card .audience-kicker {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5) !important; /* + impact */
+}
+
+.audience-kicker {
+  margin: 0 !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(3.2rem, 9vw, 6rem) !important;
+  font-weight: 900 !important;
+  line-height: 0.92 !important;
+  letter-spacing: 0.03em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+}
+
+.who-we-reach {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 9vw, 7rem) !important;
+  font-weight: 900 !important;
+  line-height: 0.92 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  margin: 0 0 4rem 0 !important;
+  color: var(--text) !important;
+}
+
+.audience-card-content {
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 4rem 2rem !important;
+  text-align: center !important;
+  min-height: 460px !important;
 }
