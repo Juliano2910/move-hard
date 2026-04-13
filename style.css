@@ -1142,7 +1142,7 @@ button { font: inherit; }
 }
 
 /* ========================================
-   BLANC OBLIGATOIRE - AUDIENCE CARDS 
+   BLANC OBLIGATOIRE - TAILES RÉDUITES
    ======================================== */
 .audience-card p.audience-kicker,
 .audience-card p.audience-kicker.trail-text,
@@ -1151,10 +1151,10 @@ button { font: inherit; }
   color: #ffffff !important;
   text-shadow: 0 2px 8px rgba(0,0,0,0.8) !important;
   font-family: 'Bebas Neue', sans-serif !important;
-  font-size: clamp(4.5rem, 12vw, 8rem) !important;
+  font-size: clamp(2.5rem, 6vw, 4rem) !important;  /* ← RÉDUIT */
   font-weight: 900 !important;
-  line-height: 0.88 !important;
-  letter-spacing: 0.06em !important;
+  line-height: 0.9 !important;
+  letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -1162,12 +1162,12 @@ button { font: inherit; }
 
 .who-we-reach {
   font-family: 'Bebas Neue', sans-serif !important;
-  font-size: clamp(4.8rem, 12vw, 9rem) !important;
+  font-size: clamp(3.5rem, 8vw, 6rem) !important;  /* ← RÉDUIT */
   font-weight: 900 !important;
   line-height: 0.9 !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: 0.06em !important;
   text-transform: uppercase !important;
-  margin: 0 0 5rem 0 !important;
+  margin: 0 0 4rem 0 !important;
   color: #000000 !important;
   text-align: center !important;
 }
@@ -1179,8 +1179,8 @@ button { font: inherit; }
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
-  min-height: 500px !important;
-  padding: 3rem 1rem !important;
+  min-height: 460px !important;  /* ← Hauteur normale */
+  padding: 2rem 1rem !important;
   text-align: center !important;
 }
 
@@ -1198,9 +1198,9 @@ button { font: inherit; }
   .audience-card p.audience-kicker.trail-text,
   .audience-card p.audience-kicker.run-text,
   .audience-card p.audience-kicker.cycling-text {
-    font-size: clamp(3.5rem, 10vw, 6rem) !important;
+    font-size: clamp(2rem, 7vw, 3.2rem) !important;  /* ← Mobile OK */
   }
   .who-we-reach {
-    font-size: clamp(3.8rem, 10vw, 6.5rem) !important;
+    font-size: clamp(2.8rem, 9vw, 4.5rem) !important;
   }
 }
