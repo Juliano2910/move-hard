@@ -744,3 +744,124 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+.projects-page {
+  padding: 48px 6vw 120px;
+  background: var(--white);
+}
+
+.projects-title {
+  text-align: center;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  line-height: .9;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1250px;
+  margin: 0 auto 140px;
+}
+
+.project-card.reverse {
+  grid-template-columns: .9fr 1.1fr;
+}
+
+.project-card.reverse .project-content {
+  order: 2;
+}
+
+.project-card.reverse .project-image {
+  order: 1;
+}
+
+.project-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.project-tags span {
+  padding: 8px 26px;
+  border: 2px solid var(--black);
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.project-content h2 {
+  padding: 22px 0;
+  border-top: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
+  font-size: clamp(2rem, 4vw, 4rem);
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+
+.project-text {
+  min-height: 260px;
+}
+
+.project-text p {
+  margin-bottom: 24px;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.project-text strong {
+  font-size: 1.1rem;
+}
+
+.project-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 2px solid var(--black);
+  border-bottom: 1px solid var(--black);
+}
+
+.project-stats div {
+  padding: 18px 12px;
+}
+
+.project-stats span {
+  display: block;
+  font-size: .78rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.project-stats strong {
+  display: block;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  letter-spacing: -0.08em;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .project-card,
+  .project-card.reverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .project-card.reverse .project-content,
+  .project-card.reverse .project-image {
+    order: initial;
+  }
+
+  .project-stats {
+    grid-template-columns: 1fr;
+  }
+}
