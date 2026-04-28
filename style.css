@@ -594,3 +594,41 @@ section {
     gap: 24px;
   }
 }
+
+.logos-carousel {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.logos-track {
+  display: flex;
+  gap: 60px;
+  width: max-content;
+  animation: scrollLogos 28s linear infinite;
+}
+
+.logos-carousel:hover .logos-track {
+  animation-play-state: paused;
+}
+
+.logos-track span {
+  font-weight: 900;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  letter-spacing: -0.05em;
+  opacity: 0.8;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+.logos-track span:hover {
+  opacity: 1;
+}
+
+@keyframes scrollLogos {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
