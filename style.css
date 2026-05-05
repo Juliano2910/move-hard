@@ -921,3 +921,9 @@ section {
     right: 20px;
   }
 }
+
+.mission mark {
+  background: var(--yellow);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
