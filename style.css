@@ -913,3 +913,11 @@ section {
     gap: 18px;
   }
 }
+
+@media (max-width: 768px) {
+  .scroll-arrow {
+    transform: scale(0.8);
+    bottom: 40px; /* ajuste aussi la position */
+    right: 20px;
+  }
+}
