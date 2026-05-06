@@ -43,7 +43,7 @@ a {
   display: flex;
   align-items: flex-end;
   padding: 48px 7vw;
-  color: var(--yellow);
+  color: #ffffff;
   background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.75)), url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1800&q=80") center/cover;
 }
 
@@ -55,6 +55,7 @@ a {
   font-weight: 900;
   letter-spacing: -0.04em;
   z-index: 10;
+  color: #ffffff;
 }
 
 .menu-btn {
@@ -62,10 +63,10 @@ a {
   top: 30px;
   right: 7vw;
   z-index: 20;
- border: 1px solid rgba(0,240,255,.55);
+  border: 1px solid rgba(255,255,255,.75);
   border-radius: 999px;
   background: rgba(0,0,0,.18);
-  color: var(--yellow);
+  color: #ffffff;
   padding: 9px 16px;
   font-size: 12px;
   font-weight: 900;
@@ -84,10 +85,10 @@ a {
   gap: 10px;
   min-width: 180px;
   padding: 18px;
-  border: 1px solid rgba(0,240,255,.35);
+  border: 1px solid rgba(255,255,255,.35);
   border-radius: 18px;
   background: rgba(5,5,5,.72);
-  color: var(--yellow);
+  color: #ffffff;
   transform: translateY(-10px);
   opacity: 0;
   pointer-events: none;
@@ -109,6 +110,7 @@ a {
   letter-spacing: -0.03em;
   opacity: .85;
   transition: opacity .2s ease, transform .2s ease;
+  color: #ffffff;
 }
 
 .menu-panel a:hover {
@@ -120,10 +122,9 @@ a {
   width: fit-content;
   margin-top: 8px;
   padding: 8px 12px;
- border: 1px solid rgba(0,240,255,.55);
+  border: 1px solid rgba(255,255,255,.55);
   border-radius: 999px;
   background: transparent;
-  color: var(--yellow);
   cursor: pointer;
 }
 
@@ -137,6 +138,7 @@ a {
   letter-spacing: -0.08em;
   font-weight: 900;
   max-width: 850px;
+  color: #ffffff;
 }
 
 .hero p {
@@ -145,6 +147,7 @@ a {
   font-weight: 900;
   letter-spacing: -0.05em;
   text-transform: uppercase;
+  color: #ffffff;
 }
 
 .down-btn {
@@ -154,13 +157,14 @@ a {
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  background: var(--yellow);
+  background: #ffffff;
   color: var(--black);
   display: grid;
   place-items: center;
   font-size: 54px;
   font-weight: 900;
   transition: transform .25s ease;
+  box-shadow: 0 8px 30px rgba(0,240,255,0.3);
 }
 
 .down-btn:hover {
@@ -263,7 +267,7 @@ section {
   min-width: 240px;
   padding: 26px 30px;
   border-radius: 999px;
-  border: 1px solid rgba(5,5,5,.12);
+  border: 2px solid var(--black);
   background: linear-gradient(145deg, rgba(0,0,0,.04), rgba(0,0,0,.01));
   display: flex;
   flex-direction: column;
@@ -290,7 +294,7 @@ section {
 
 .stat-pill:hover {
   transform: translateY(-4px);
-  border-color: var(--yellow);
+  border-color: var(--black);
 }
 
 @keyframes scrollStats {
@@ -414,6 +418,13 @@ section {
   margin: 0 auto 56px;
   font-size: clamp(1rem, 1.5vw, 1.3rem);
   line-height: 1.6;
+}
+
+.mission mark {
+  background: var(--black);
+  color: #ffffff;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
 .logos {
@@ -891,12 +902,8 @@ section {
 }
 
 @keyframes projectImageScroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 @media (max-width: 900px) {
@@ -919,18 +926,4 @@ section {
     grid-template-columns: 1fr;
     gap: 18px;
   }
-}
-
-.mission mark {
-  background: var(--yellow);
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-
-.down-btn {
-  box-shadow: 0 8px 30px rgba(0,240,255,0.3);
-}
-
-.menu-btn {
-  border-color: rgba(0,240,255,0.6);
 }
