@@ -477,12 +477,12 @@ section {
 }
 
 .contact .btn {
-  border-color: var(--yellow);
-  color: var(--yellow);
+  border-color: #00FF66;
+  color: #00FF66;
 }
 
 .contact .btn:hover {
-  background: var(--yellow);
+  background: #00FF66;
   color: var(--black);
 }
 
