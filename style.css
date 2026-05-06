@@ -502,11 +502,7 @@ section {
 }
 
 .eyebrow::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--yellow);
+  display: none;
 }
 
 .reveal {
@@ -926,4 +922,12 @@ section {
     grid-template-columns: 1fr;
     gap: 18px;
   }
+}
+
+.highlight-green {
+  background: linear-gradient(90deg, #00FF66, #00D26A);
+  color: var(--black);
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-weight: 900;
 }
