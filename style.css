@@ -934,7 +934,6 @@ section {
 
 .journal-section {
   padding: 110px 5vw;
-  background: var(--white);
   text-align: center;
 }
 
@@ -954,68 +953,44 @@ section {
 .journal-header p {
   font-weight: 800;
   line-height: 1.5;
-  opacity: .75;
-}
-
-.article-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  max-width: 720px;
-  margin: 0 auto;
+  opacity: .7;
 }
 
 .article-card {
   display: block;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 42px;
   border: 2px solid var(--black);
   border-radius: 28px;
-  overflow: hidden;
-  background: var(--black);
-  color: var(--white);
-  transition: transform .25s ease, box-shadow .25s ease;
+  text-align: left;
+  transition: all .25s ease;
 }
 
 .article-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 50px rgba(0,0,0,.18);
+  transform: translateY(-4px);
+  background: var(--black);
+  color: var(--white);
 }
 
-.article-card img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
-  filter: grayscale(100%);
-  transition: filter .25s ease, transform .25s ease;
-}
-
-.article-card:hover img {
-  filter: grayscale(0%);
-  transform: scale(1.02);
-}
-
-.article-content {
-  padding: 30px;
-  text-align: left;
-}
-
-.article-content span {
+.article-card span {
   display: inline-block;
-  margin-bottom: 14px;
-  color: #00FF66;
-  font-size: .75rem;
+  margin-bottom: 18px;
+  font-size: .72rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: .08em;
+  color: #00FF66;
 }
 
-.article-content h3 {
-  font-size: clamp(1.8rem, 4vw, 3.5rem);
+.article-card h3 {
+  font-size: clamp(2rem, 4vw, 4rem);
   line-height: .95;
-  letter-spacing: -0.06em;
-  margin-bottom: 18px;
+  letter-spacing: -0.07em;
+  margin-bottom: 20px;
 }
 
-.article-content p {
+.article-card p {
   font-weight: 900;
   color: #00FF66;
 }
