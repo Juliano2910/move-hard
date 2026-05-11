@@ -13,61 +13,54 @@
 
 <body>
 
-    <header class="hero" id="top">
-        <div class="mini-logo">MHM</div>
+    <header class="hero-new" id="top">
+    <div class="mini-logo">MHM</div>
+    <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu" data-i18n="menuButton">menu</button>
+    
+    <nav class="menu-panel" id="menuPanel" aria-label="Navigation principale">
+        <a href="#medias" data-i18n="navMedia">Médias</a>
+        <a href="#mission" data-i18n="navMission">Mission</a>
+        <a href="#references" data-i18n="navReferences">Références</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+        <button class="lang-btn" id="langBtn" type="button">EN</button>
+    </nav>
+
+    <h1 class="main-title">MOVE HARD MEDIA</h1>
+
+    <div class="visual-center">
+        <div class="ghost-text" data-i18n="introTitleBig">LE SPORT, PLUS FORT</div>
         
-        <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu" data-i18n="menuButton">menu</button>
-        
-        <nav class="menu-panel" id="menuPanel" aria-label="Navigation principale">
-            <a href="#intro" data-i18n="navManifesto">Manifesto</a>
-            <a href="#medias" data-i18n="navMedia">Médias</a>
-            <a href="#mission" data-i18n="navMission">Mission</a>
-            <a href="#references" data-i18n="navReferences">Références</a>
-            <a href="#contact" data-i18n="navContact">Contact</a>
-            <button class="lang-btn" id="langBtn" type="button">EN</button>
-        </nav>
-
-        <div class="hero-content">
-            <h1>Move Hard<br />Media</h1>
-            <p data-i18n="heroSubtitle">Trail running — Cyclisme — Running</p>
+        <div class="cards-stack">
+            <img src="trail4.jpg" alt="Trail" class="card">
+            <img src="bike3.jpg" alt="Bike" class="card">
+            <img src="running3.jpg" alt="Run" class="card">
+            <img src="mission.jpg" alt="Sport" class="card">
         </div>
+    </div>
 
-        <a href="#intro" class="down-btn" aria-label="Descendre">↓</a>
-    </header>
-
-    <section class="intro" id="intro">
-        <div>
-            <img class="tiny-photo" src="trail4.jpg" alt="Groupe en montagne" />
-            <h2 class="big-title">
-                <span class="small-line" data-i18n="introTitleSmall">Le sport,</span>
-                <span class="big-line" data-i18n="introTitleBig">plus fort</span>
-            </h2>
+    <div class="stats-bar">
+        <div class="stat-item">
+            <strong>20M</strong>
+            <span data-i18n="statReach">Personnes touchées par mois</span>
         </div>
-        <div>
-            <p class="intro-copy" data-i18n="introCopy">Agence média dédiée aux cultures trail running, running et cyclisme.</p>
-            <div class="floating-images">
-                <img src="running3.jpg" alt="Coureurs" />
-                <img src="bike3.jpg" alt="Cycliste" />
-            </div>
+        <div class="stat-item">
+            <strong>+800</strong>
+            <span data-i18n="statCollabs">Entreprises accompagnées</span>
         </div>
-    </section>
-
-    <section class="stats-carousel" aria-label="Statistiques des médias">
-        <div class="stats-mask">
-            <div class="stats-row">
-                <div class="stat-pill"><strong>2M</strong><span data-i18n="statReach">reach mensuel</span></div>
-                <div class="stat-pill"><strong>+20K</strong><span data-i18n="statFollowers">abonnés cumulés</span></div>
-                <div class="stat-pill"><strong>90%</strong><span data-i18n="statAge">18–40 ans</span></div>
-                <div class="stat-pill"><strong>+10</strong><span data-i18n="statCollabs">collaborations</span></div>
-                <div class="stat-pill"><strong>3</strong><span data-i18n="statCommunities">communautés</span></div>
-                <div class="stat-pill"><strong>2M</strong><span data-i18n="statReach">reach mensuel</span></div>
-                <div class="stat-pill"><strong>+20K</strong><span data-i18n="statFollowers">abonnés cumulés</span></div>
-                <div class="stat-pill"><strong>90%</strong><span data-i18n="statAge">18–40 ans</span></div>
-                <div class="stat-pill"><strong>+10</strong><span data-i18n="statCollabs">collaborations</span></div>
-                <div class="stat-pill"><strong>3</strong><span data-i18n="statCommunities">communautés</span></div>
-            </div>
+        <div class="stat-item">
+            <strong>90%</strong>
+            <span data-i18n="statAge">De l'audience a entre 18 et 40 ans</span>
         </div>
-    </section>
+        <div class="stat-item">
+            <strong>+600K</strong>
+            <span data-i18n="statFollowers">Abonnés sur les réseaux</span>
+        </div>
+        <div class="stat-item">
+            <strong>+10</strong>
+            <span data-i18n="statCommunities">Projets d'envergure</span>
+        </div>
+    </div>
+</header>
 
     <section class="medias reveal" id="medias">
         <h2 class="handle" id="handleText">@trail.hard</h2>
