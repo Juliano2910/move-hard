@@ -100,3 +100,20 @@ langBtn.addEventListener("click", () => {
   currentLang = currentLang === "fr" ? "en" : "fr";
   applyTranslation(currentLang);
 });
+
+const mediaHandle = document.getElementById("mediaHandle");
+
+if (mediaHandle) {
+  const handles = ["@trail.hard", "@run.hard", "@cycling.hard"];
+  let currentHandle = 0;
+
+  setInterval(() => {
+    mediaHandle.classList.add("is-changing");
+
+    setTimeout(() => {
+      currentHandle = (currentHandle + 1) % handles.length;
+      mediaHandle.textContent = handles[currentHandle];
+      mediaHandle.classList.remove("is-changing");
+    }, 350);
+  }, 3000);
+}
