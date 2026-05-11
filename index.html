@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Move Hard Media</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700;900&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="hero" id="top">
     <div class="mini-logo">MHM</div>
@@ -16,124 +19,139 @@
     <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu" data-i18n="menuButton">menu</button>
 
     <nav class="menu-panel" id="menuPanel" aria-label="Navigation principale">
-      <a href="#intro" data-i18n="navManifesto">Manifesto</a>
-      <a href="#medias" data-i18n="navMedia">Médias</a>
-      <a href="#mission" data-i18n="navMission">Mission</a>
-      <a href="#references" data-i18n="navReferences">Références</a>
-      <a href="#contact" data-i18n="navContact">Contact</a>
+      <a href="#intro">Manifesto</a>
+      <a href="#medias">Médias</a>
+      <a href="#mission">Mission</a>
+      <a href="#references">Références</a>
+      <a href="#contact">Contact</a>
       <button class="lang-btn" id="langBtn" type="button">EN</button>
     </nav>
 
     <div class="hero-content">
-      <h1>Move Hard<br />Media</h1>
-      <p data-i18n="heroSubtitle">Trail running — Cyclisme — Running</p>
+      <h1>MOVE HARD MEDIA</h1>
+
+      <div class="hero-stack">
+        <img src="running3.jpg" alt="Running" />
+        <img src="bike3.jpg" alt="Cyclisme" />
+        <img src="trail4.jpg" alt="Trail running" />
+      </div>
+
+      <h2>LE SPORT, PLUS FORT</h2>
     </div>
 
     <a href="#intro" class="down-btn" aria-label="Descendre">↓</a>
   </header>
 
-  <section class="intro" id="intro">
-    <div>
-     <img class="tiny-photo" src="trail4.jpg" alt="Groupe en montagne" />
-      <h2 class="big-title">
-        <span class="small-line" data-i18n="introTitleSmall">Le sport,</span>
-        <span class="big-line" data-i18n="introTitleBig">plus fort</span>
-      </h2>
-    </div>
-
-    <div>
-      <p class="intro-copy" data-i18n="introCopy">Agence média dédiée aux cultures trail running, running et cyclisme.</p>
-      <div class="floating-images">
-       <img src="running3.jpg" alt="Coureurs" />
-<img src="bike3.jpg" alt="Cycliste" />
-      </div>
-    </div>
-  </section>
-
   <section class="stats-carousel" aria-label="Statistiques des médias">
     <div class="stats-mask">
       <div class="stats-row">
-        <div class="stat-pill"><strong>2M</strong><span data-i18n="statReach">reach mensuel</span></div>
-        <div class="stat-pill"><strong>+20K</strong><span data-i18n="statFollowers">abonnés cumulés</span></div>
-        <div class="stat-pill"><strong>90%</strong><span data-i18n="statAge">18–40 ans</span></div>
-        <div class="stat-pill"><strong>+10</strong><span data-i18n="statCollabs">collaborations</span></div>
-        <div class="stat-pill"><strong>3</strong><span data-i18n="statCommunities">communautés</span></div>
-        <div class="stat-pill"><strong>2M</strong><span data-i18n="statReach">reach mensuel</span></div>
-        <div class="stat-pill"><strong>+20K</strong><span data-i18n="statFollowers">abonnés cumulés</span></div>
-        <div class="stat-pill"><strong>90%</strong><span data-i18n="statAge">18–40 ans</span></div>
-        <div class="stat-pill"><strong>+10</strong><span data-i18n="statCollabs">collaborations</span></div>
-        <div class="stat-pill"><strong>3</strong><span data-i18n="statCommunities">communautés</span></div>
+        <div class="stat-pill"><strong>2M</strong><span>personnes touchées par mois</span></div>
+        <div class="stat-pill"><strong>+20K</strong><span>abonnés cumulés</span></div>
+        <div class="stat-pill"><strong>90%</strong><span>audience âgée de 18 à 40 ans</span></div>
+        <div class="stat-pill"><strong>3</strong><span>communautés sportives</span></div>
+        <div class="stat-pill"><strong>+10</strong><span>collaborations marques</span></div>
+
+        <div class="stat-pill"><strong>2M</strong><span>personnes touchées par mois</span></div>
+        <div class="stat-pill"><strong>+20K</strong><span>abonnés cumulés</span></div>
+        <div class="stat-pill"><strong>90%</strong><span>audience âgée de 18 à 40 ans</span></div>
+        <div class="stat-pill"><strong>3</strong><span>communautés sportives</span></div>
+        <div class="stat-pill"><strong>+10</strong><span>collaborations marques</span></div>
       </div>
     </div>
   </section>
 
-  <section class="medias reveal" id="medias">
-    <h2 class="handle" id="handleText">@trail.hard</h2>
+  <section class="intro" id="intro">
+    <div class="intro-left">
+      <h2>
+        AGENCE MÉDIA DÉDIÉE AUX CULTURES<br />
+        TRAIL RUNNING, RUNNING ET CYCLISME.
+      </h2>
+    </div>
 
- <div class="media-carousel">
-  <div class="media-track">
-    <img src="bike2.jpg" alt="Cyclisme" />
-    <img src="trail2.jpg" alt="Trail running" />
-    <img src="running2.jpg" alt="Running urbain" />
-    <img src="bike2.jpg" alt="Cyclisme" />
-    <img src="trail2.jpg" alt="Trail montagne" />
-    <img src="running2.jpg" alt="Running route" />
-    <img src="bike2.jpg" alt="Cyclisme" />
-    <img src="trail2.jpg" alt="Trail running" />
-    <img src="running2.jpg" alt="Running urbain" />
-     <img src="bike2.jpg" alt="Trail montagne" />
-    <img src="trail2.jpg" alt="Trail montagne" />
-    <img src="running2.jpg" alt="Running route" />
-  </div>
-</div>
-
-    <div class="center-button">
-     <a class="btn" href="medias.html">Découvrir les médias</a>
+    <div class="intro-right">
+      <p>
+        Nous aidons les marques à toucher des communautés sportives engagées grâce à des contenus puissants,
+        authentiques et pensés pour les réseaux sociaux.
+      </p>
     </div>
   </section>
 
-  <section class="mission reveal" id="mission">
-    <h2 class="section-title" data-i18n="missionTitle">Notre mission</h2>
-    <img class="mission-image" src="mission.jpg" alt="Événement sportif" />
-  <p data-i18n="missionText">
-  <strong>
-    Créer des ponts entre les 
-    <mark>marques, les athlètes et les communautés sportives</mark> 
-    grâce à des contenus authentiques, performants et culturellement ancrés.
-  </strong>
-</p>
+  <section class="medias" id="medias">
+    <div class="section-heading">
+      <h2>NOS MÉDIAS</h2>
+      <p>TRAIL RUNNING · CYCLISME · RUNNING</p>
+    </div>
+
+    <div class="media-slider">
+      <article class="media-card">
+        <img src="trail2.jpg" alt="Trail running" />
+        <h3>@trail.hard</h3>
+        <a href="medias.html">Découvrir les médias</a>
+      </article>
+
+      <article class="media-card">
+        <img src="running2.jpg" alt="Running" />
+        <h3>@run.hard</h3>
+        <a href="medias.html">Découvrir les médias</a>
+      </article>
+
+      <article class="media-card">
+        <img src="bike2.jpg" alt="Cyclisme" />
+        <h3>@cycling.hard</h3>
+        <a href="medias.html">Découvrir les médias</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="mission" id="mission">
+    <h2>NOTRE MISSION</h2>
+
+    <div class="mission-visual">
+      <img src="mission.jpg" alt="Événement sportif" />
+    </div>
+
+    <p>
+      Créer des ponts entre les <mark>marques, les athlètes et les communautés sportives</mark>
+      grâce à des contenus authentiques, performants et culturellement ancrés.
+    </p>
+
     <a class="btn" href="projets.html">Découvrir</a>
   </section>
 
-<section class="logos-carousel" id="references">
-  <div class="logos-track">
-    <span>Andros Sport</span>
-    <span>Kiprun</span>
-    <span>Merrell</span>
-    <span>La Sportiva</span>
-    <span>Saucony</span>
-    <span>Cantal Auvergne</span>
+  <section class="logos-carousel" id="references">
+    <div class="logos-track">
+      <span>Andros Sport</span>
+      <span>Kiprun</span>
+      <span>Merrell</span>
+      <span>La Sportiva</span>
+      <span>Saucony</span>
+      <span>Cantal Auvergne</span>
 
-    <!-- DUPLICATION pour loop fluide -->
-    <span>Andros Sport</span>
-    <span>Kiprun</span>
-    <span>Merrell</span>
-    <span>La Sportiva</span>
-    <span>Saucony</span>
-    <span>Cantal Auvergne</span>
-  </div>
-</section>
-  
-  
+      <span>Andros Sport</span>
+      <span>Kiprun</span>
+      <span>Merrell</span>
+      <span>La Sportiva</span>
+      <span>Saucony</span>
+      <span>Cantal Auvergne</span>
+    </div>
+  </section>
+
   <section class="contact" id="contact">
-    <div class="contact-card reveal">
-      <span class="eyebrow" data-i18n="contactEyebrow">
-  <span class="highlight-green">Partenariats marques</span>
-</span>
-      <h2 data-i18n="contactTitle">Nous contacter</h2>
-      <p data-i18n="contactText">Marques, agences ou partenaires : construisons ensemble des campagnes impactantes autour du sport et de la performance.</p>
+    <div class="contact-card">
+      <span class="eyebrow">
+        <span class="highlight-green">Partenariats marques</span>
+      </span>
+
+      <h2>Nous contacter</h2>
+
+      <p>
+        Marques, agences ou partenaires : construisons ensemble des campagnes impactantes autour du sport,
+        de la performance et des communautés outdoor.
+      </p>
+
       <p><strong>Email :</strong> contact@move-hard.com</p>
-      <a class="btn" href="mailto:contact@move-hard.com" data-i18n="contactButton">Nous contacter</a>
+
+      <a class="btn" href="mailto:contact@move-hard.com">Nous contacter</a>
     </div>
   </section>
 
