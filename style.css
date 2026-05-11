@@ -310,113 +310,61 @@ section {
 
 /* MEDIAS */
 
-/* MEDIAS */
+/* MEDIAS SIMPLE ROTATOR */
 
-.medias {
-  padding: 92px 0 120px;
+.medias-simple {
+  min-height: 72vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
   background: var(--white);
-  text-align: center;
-  overflow: hidden;
+  padding: 120px 5vw;
 }
 
-.section-heading {
-  margin-bottom: 62px;
-}
-
-.section-heading h2 {
+.media-rotator h2 {
   font-family: "Anton", Impact, sans-serif;
-  font-size: clamp(5rem, 11vw, 12rem);
-  line-height: .75;
-  letter-spacing: -0.045em;
-  text-transform: uppercase;
-}
-
-.section-heading p {
-  margin-top: 12px;
-  font-size: clamp(.85rem, 1.4vw, 1.25rem);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.04em;
-}
-
-.media-slider {
-  display: flex;
-  gap: 110px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 0 7vw 52px;
-  cursor: grab;
-  -webkit-overflow-scrolling: touch;
-}
-
-.media-slider::-webkit-scrollbar {
-  height: 0;
-}
-
-.media-card {
-  min-width: min(460px, 78vw);
-  scroll-snap-align: center;
-  text-align: center;
-  flex-shrink: 0;
-}
-
-.media-card img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.media-card h3 {
-  font-family: "Anton", Impact, sans-serif;
-  font-size: clamp(4.2rem, 7vw, 8rem);
-  line-height: .78;
+  font-size: clamp(5rem, 14vw, 15rem);
+  line-height: .85;
   letter-spacing: -0.065em;
-  margin-top: 22px;
-  white-space: nowrap;
+  text-transform: lowercase;
+  margin-bottom: 54px;
+  transition: opacity .35s ease, transform .35s ease;
 }
 
-.media-card a {
+.media-rotator h2.is-changing {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.media-rotator-btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-width: 190px;
-  margin-top: 26px;
-  padding: 13px 28px;
+  min-width: 210px;
+  padding: 14px 30px;
   border: 3px solid var(--black);
   border-radius: 999px;
-  font-size: .9rem;
+  font-size: .95rem;
   font-weight: 900;
   background: var(--white);
   transition: all .22s ease;
 }
 
-.media-card a:hover {
+.media-rotator-btn:hover {
   background: var(--black);
   color: var(--white);
   transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
-  .medias {
-    padding-top: 76px;
+  .medias-simple {
+    min-height: 62vh;
+    padding: 90px 24px;
   }
 
-  .section-heading h2 {
-    font-size: clamp(4rem, 18vw, 7rem);
-  }
-
-  .media-slider {
-    gap: 38px;
-    padding-inline: 24px;
-  }
-
-  .media-card {
-    min-width: 82vw;
-  }
-
-  .media-card h3 {
-    font-size: clamp(3.6rem, 17vw, 5.8rem);
+  .media-rotator h2 {
+    font-size: clamp(4rem, 19vw, 7rem);
+    margin-bottom: 38px;
   }
 }
 
