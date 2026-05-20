@@ -951,3 +951,90 @@ section {
         width: 82vw;
     }
 }
+
+/* ===== MOBILE FIX — PAGE NOTRE MISSION / PROJETS ===== */
+
+@media (max-width: 768px) {
+  .projects-page {
+    padding: 28px 20px 70px;
+  }
+
+  .projects-title {
+    font-size: clamp(3.2rem, 18vw, 5.4rem);
+    line-height: .88;
+    margin-bottom: 48px;
+    text-align: left;
+  }
+
+  .project-showcase,
+  .project-showcase.reverse {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    margin: 0 auto 80px;
+  }
+
+  .project-left,
+  .project-right {
+    width: 100%;
+  }
+
+  .project-tags {
+    margin-bottom: 22px;
+  }
+
+  .project-left h2 {
+    font-size: clamp(3rem, 18vw, 5.5rem);
+    line-height: .9;
+    padding: 18px 0;
+    margin-bottom: 30px;
+  }
+
+  .project-block {
+    margin-bottom: 34px;
+  }
+
+  .project-block h3 {
+    font-size: clamp(2.2rem, 13vw, 4rem);
+    line-height: .95;
+  }
+
+  .project-block p {
+    font-size: 1rem;
+    line-height: 1.45;
+    max-width: 100%;
+  }
+
+  .project-stats-boxes {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 44px;
+  }
+
+  .project-stats-boxes span {
+    min-height: auto;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .project-stats-boxes div {
+    text-align: left;
+  }
+
+  .project-stats-boxes strong {
+    font-size: clamp(3rem, 18vw, 5.5rem);
+    text-align: center;
+  }
+
+  .project-image-carousel {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+
+  .project-image-track img {
+    width: 82vw;
+    max-width: 360px;
+    aspect-ratio: 4 / 5;
+  }
+}
