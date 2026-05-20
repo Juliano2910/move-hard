@@ -611,128 +611,343 @@ section {
     .media-profile h1 { font-size: clamp(4rem, 18vw, 9rem); }
 }
 
-@media (max-width: 768px) {
+/* ==========================================================================
+   6. MOBILE OPTIMIZATION
+   ========================================================================== */
 
-    .hero {
-        min-height: 62vh;
-        padding: 28px 24px 40px;
-        align-items: flex-end;
+@media (max-width: 900px) {
+    .intro {
+        grid-template-columns: 1fr;
+        min-height: auto;
     }
 
-    .light-header {
-        min-height: 62vh;
+    .intro-copy {
+        text-align: left;
+        padding-top: 0;
     }
 
-    .hero-content {
-        width: 100%;
+    .floating-images {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: start;
     }
 
-    .hero h1 {
-        font-size: clamp(4rem, 18vw, 6rem);
-        line-height: .88;
-        margin-bottom: 18px;
-    }
-
-    .hero p {
-        padding-right: 0;
-        white-space: normal;
-        overflow: visible;
-        font-size: .95rem;
-        line-height: 1.2;
-        max-width: 220px;
-    }
-
-    .down-btn {
-        width: 58px;
-        height: 58px;
-        font-size: 34px;
-        right: 24px;
-        bottom: 36px;
-        z-index: 15;
-    }
-
-    section {
-        padding: 64px 24px;
+    .media-track {
+        gap: 16px;
     }
 
     .media-track img {
-        width: 72vw;
+        width: min(280px, 42vw);
     }
 
     .logos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project-showcase,
+    .project-showcase.reverse {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .project-showcase.reverse .project-left,
+    .project-showcase.reverse .project-right {
+        order: initial;
+    }
+
+    .project-image-track img {
+        width: 78vw;
+    }
+
+    .project-stats-boxes {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .media-stats {
         grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
+    }
+
+    .media-profile h1 {
+        font-size: clamp(3.5rem, 16vw, 7rem);
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 56px 22px;
+    }
+
+    .hero,
+    .light-header {
+        min-height: 58vh;
+        padding: 28px 22px 34px;
+        align-items: flex-end;
+        background: #ffffff;
+        color: #000;
+    }
+
+    .light-header .hero-content {
+        padding-bottom: 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.6rem, 17vw, 5.6rem);
+        line-height: .86;
+        letter-spacing: -0.08em;
+        margin-bottom: 18px;
+        max-width: 100%;
+        color: #000;
+    }
+
+    .hero p {
+        margin-top: 0;
+        padding-right: 82px;
+        white-space: normal;
+        overflow: visible;
+        font-size: clamp(.78rem, 3.6vw, .95rem);
+        line-height: 1.12;
+        max-width: 100%;
+        color: #000;
+    }
+
+    .mini-logo {
+        top: 26px;
+        left: 22px;
+        color: #000;
+    }
+
+    .menu-btn {
+        top: 22px;
+        right: 22px;
+        color: #000;
+        border: 2px solid #000;
+        background: transparent;
+        padding: 8px 15px;
+    }
+
+    .menu-panel {
+        top: 68px;
+        right: 22px;
+        left: 22px;
+        min-width: auto;
+        background: rgba(247, 247, 242, .96);
+        border: 2px solid #000;
+        color: #000;
+    }
+
+    .menu-panel a,
+    .lang-btn {
+        color: #000;
+    }
+
+    .lang-btn {
+        border: 1px solid #000;
+    }
+
+    .down-btn {
+        width: 54px;
+        height: 54px;
+        font-size: 32px;
+        right: 22px;
+        bottom: 34px;
+        background: #000;
+        color: #fff;
+        box-shadow: none;
+        z-index: 15;
+    }
+
+    .big-title .small-line {
+        font-size: clamp(3rem, 18vw, 5.5rem);
+    }
+
+    .big-title .big-line {
+        font-size: clamp(4rem, 22vw, 7rem);
+        white-space: normal;
+    }
+
+    .intro {
+        gap: 42px;
+    }
+
+    .tiny-photo {
+        width: 160px;
+    }
+
+    .floating-images {
+        margin-top: 34px;
+    }
+
+    .floating-images img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 10;
+    }
+
+    .floating-images img:last-child {
+        transform: none;
+    }
+
+    .stats-carousel {
+        padding: 44px 0;
+    }
+
+    .stat-pill {
+        min-width: 190px;
+        padding: 20px 24px;
+    }
+
+    .medias {
+        padding-top: 72px;
+    }
+
+    .handle {
+        font-size: clamp(3.2rem, 18vw, 5.5rem);
+        margin-bottom: 32px;
+    }
+
+    .media-track img {
+        width: 74vw;
+    }
+
+    .mission {
+        padding-top: 56px;
+    }
+
+    .section-title {
+        font-size: clamp(3rem, 17vw, 5.5rem);
+        margin-bottom: 24px;
+    }
+
+    .mission-image {
+        width: 100%;
+    }
+
+    .contact {
+        min-height: auto;
+        padding: 72px 22px;
+    }
+
+    .contact-card {
+        width: 100%;
+        padding: 42px 22px;
+        border-radius: 22px;
+    }
+
+    .contact h2 {
+        font-size: clamp(2.8rem, 16vw, 5rem);
     }
 }
 
 @media (max-width: 520px) {
-    .media-stats { grid-template-columns: 1fr; }
-}
+    .media-page,
+    .projects-page {
+        padding: 28px 22px 70px;
+    }
 
-/* ===== LIGHT HEADER ===== */
+    .back-link {
+        margin-bottom: 48px;
+        font-size: .85rem;
+    }
 
-.light-header {
-    background: #ffffff;
-    min-height: 72vh;
-}
+    .media-profile {
+        min-height: auto;
+        padding: 40px 0 72px;
+    }
 
-/* Logo */
+    .media-profile h1 {
+        font-size: clamp(3.2rem, 18vw, 5.6rem);
+        line-height: .9;
+        margin-bottom: 30px;
+        word-break: break-word;
+    }
 
-.light-header .mini-logo {
-    color: #000;
-}
+    .media-cover {
+        width: min(230px, 74vw);
+    }
 
-/* Bouton menu */
+    .media-profile h2 {
+        font-size: clamp(1.8rem, 10vw, 3rem);
+        margin-bottom: 34px;
+    }
 
-.light-header .menu-btn {
-    color: #000;
-    border: 2px solid #000;
-    background: transparent;
-}
+    .media-description {
+        font-size: clamp(1.35rem, 8vw, 2.2rem);
+        line-height: 1.05;
+        margin-bottom: 54px;
+    }
 
-/* Hover */
+    .media-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 18px;
+        margin-bottom: 54px;
+    }
 
-.light-header .menu-btn:hover {
-    background: #000;
-    color: #fff;
-}
+    .media-stats strong {
+        font-size: clamp(2.3rem, 13vw, 4rem);
+    }
 
-/* Menu ouvert */
+    .media-stats span {
+        font-size: .72rem;
+    }
 
-.light-header .menu-panel a {
-    color: #000;
-}
+    .media-btn {
+        width: 100%;
+        max-width: 280px;
+    }
 
-.light-header .lang-btn {
-    color: #000;
-    border: 1px solid #000;
-}
+    .projects-title {
+        font-size: clamp(3rem, 17vw, 5rem);
+        margin-bottom: 54px;
+    }
 
-/* Hero title */
+    .project-showcase {
+        margin-bottom: 80px;
+    }
 
-.light-header .hero-content h1 {
-    color: #000;
-}
+    .project-tags {
+        flex-wrap: wrap;
+        margin-bottom: 22px;
+    }
 
-/* Sous-titre */
+    .project-tags span {
+        padding: 7px 20px;
+        font-size: .72rem;
+    }
 
-.light-header .hero-content p {
-    color: #000;
-}
+    .project-left h2 {
+        font-size: clamp(2.8rem, 16vw, 5rem);
+        padding: 18px 0;
+        margin-bottom: 28px;
+    }
 
-/* Flèche */
+    .project-block {
+        margin-bottom: 34px;
+    }
 
-.light-header .down-btn {
-    background: #000;
-    color: #fff;
-}
+    .project-block h3 {
+        font-size: clamp(2.1rem, 13vw, 4rem);
+    }
 
-/* Hover flèche */
+    .project-block p {
+        font-size: .95rem;
+        line-height: 1.45;
+    }
 
-.light-header .down-btn:hover {
-    transform: translateY(4px);
-}
+    .project-stats-boxes {
+        margin-top: 48px;
+        grid-template-columns: 1fr;
+    }
 
-.light-header .hero-content {
-    padding-bottom: 60px;
+    .project-stats-boxes span {
+        min-height: auto;
+        margin-bottom: 8px;
+    }
+
+    .project-stats-boxes strong {
+        font-size: clamp(2.8rem, 16vw, 5rem);
+    }
+
+    .project-image-track img {
+        width: 82vw;
+    }
 }
