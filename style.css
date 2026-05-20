@@ -612,12 +612,57 @@ section {
 }
 
 @media (max-width: 768px) {
-    .hero { min-height: 82vh; padding: 36px 24px; }
-    .down-btn { width: 64px; height: 64px; font-size: 38px; right: 105px; bottom: 70px; z-index: 15; }
-    .hero p { padding-right: 120px; white-space: nowrap; overflow: hidden; }
-    section { padding: 64px 24px; }
-    .media-track img { width: 72vw; }
-    .logos { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+    .hero {
+        min-height: 62vh;
+        padding: 28px 24px 40px;
+        align-items: flex-end;
+    }
+
+    .light-header {
+        min-height: 62vh;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(4rem, 18vw, 6rem);
+        line-height: .88;
+        margin-bottom: 18px;
+    }
+
+    .hero p {
+        padding-right: 0;
+        white-space: normal;
+        overflow: visible;
+        font-size: .95rem;
+        line-height: 1.2;
+        max-width: 220px;
+    }
+
+    .down-btn {
+        width: 58px;
+        height: 58px;
+        font-size: 34px;
+        right: 24px;
+        bottom: 36px;
+        z-index: 15;
+    }
+
+    section {
+        padding: 64px 24px;
+    }
+
+    .media-track img {
+        width: 72vw;
+    }
+
+    .logos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
 }
 
 @media (max-width: 520px) {
