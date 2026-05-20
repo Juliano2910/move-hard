@@ -1074,3 +1074,61 @@ section {
     bottom: 30px;
   }
 }
+
+/* ===== FINAL MOBILE HEADER FIX ===== */
+
+@media (max-width: 768px) {
+  .hero,
+  .light-header {
+    min-height: 48vh !important;
+    height: auto !important;
+    padding: 96px 22px 32px !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    background: #fff !important;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding-bottom: 0 !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.2rem, 15vw, 4.8rem) !important;
+    line-height: .86 !important;
+    margin-bottom: 18px !important;
+  }
+
+  .hero p {
+    font-size: .78rem !important;
+    line-height: 1.08 !important;
+    max-width: 190px !important;
+    padding-right: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .down-btn {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 30px !important;
+    right: 22px !important;
+    bottom: 30px !important;
+    background: #000 !important;
+    color: #fff !important;
+    box-shadow: none !important;
+  }
+
+  .mini-logo {
+    top: 32px !important;
+    left: 22px !important;
+    color: #000 !important;
+  }
+
+  .menu-btn {
+    top: 24px !important;
+    right: 22px !important;
+    color: #000 !important;
+    border: 2px solid #000 !important;
+    background: transparent !important;
+  }
+}
