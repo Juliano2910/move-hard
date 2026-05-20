@@ -224,35 +224,35 @@ section {
 
 /* Hero Section */
 .hero {
-    min-height: 72vh; 
-    position: relative; 
-    display: flex; 
-    align-items: flex-end; 
-    padding: 48px 7vw; 
-    color: #ffffff; 
-    background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.75)), url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1800&q=80") center/cover; 
+    min-height: 72vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 48px 7vw;
+    color: var(--black);
+    background: #ffffff;
 }
 
 .hero-content { 
     width: 100%; 
 }
 
-.hero h1 { 
-    font-size: clamp(4rem, 11vw, 11rem); 
-    line-height: .82; 
-    letter-spacing: -0.08em; 
-    font-weight: 900; 
-    max-width: 850px; 
-    color: #ffffff; 
+.hero h1 {
+    font-size: clamp(4rem, 11vw, 11rem);
+    line-height: .82;
+    letter-spacing: -0.08em;
+    font-weight: 900;
+    max-width: 850px;
+    color: var(--black);
 }
 
-.hero p { 
-    margin-top: 46px; 
-    font-size: clamp(1rem, 2vw, 1.8rem); 
-    font-weight: 900; 
-    letter-spacing: -0.05em; 
-    text-transform: uppercase; 
-    color: #ffffff; 
+.hero p {
+    margin-top: 46px;
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: var(--black);
 }
 
 .down-btn { 
