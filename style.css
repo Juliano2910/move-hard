@@ -623,3 +623,67 @@ section {
 @media (max-width: 520px) {
     .media-stats { grid-template-columns: 1fr; }
 }
+
+/* ===== LIGHT HEADER ===== */
+
+.light-header {
+    background: #ffffff;
+    min-height: 100vh;
+}
+
+/* Logo */
+
+.light-header .mini-logo {
+    color: #000;
+}
+
+/* Bouton menu */
+
+.light-header .menu-btn {
+    color: #000;
+    border: 2px solid #000;
+    background: transparent;
+}
+
+/* Hover */
+
+.light-header .menu-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Menu ouvert */
+
+.light-header .menu-panel a {
+    color: #000;
+}
+
+.light-header .lang-btn {
+    color: #000;
+    border: 1px solid #000;
+}
+
+/* Hero title */
+
+.light-header .hero-content h1 {
+    color: #000;
+}
+
+/* Sous-titre */
+
+.light-header .hero-content p {
+    color: #000;
+}
+
+/* Flèche */
+
+.light-header .down-btn {
+    background: #000;
+    color: #fff;
+}
+
+/* Hover flèche */
+
+.light-header .down-btn:hover {
+    transform: translateY(4px);
+}
