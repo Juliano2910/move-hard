@@ -1,119 +1,345 @@
-const handles = ["@trail.hard", "@run.hard", "@cycling.hard"];
-const handleText = document.getElementById("handleText");
-let handleIndex = 0;
+/*
+=========================================================
+Portfolio V2
+Navigation + Animations
+=========================================================
+*/
 
-setInterval(() => {
-  handleText.style.opacity = 0;
+document.addEventListener("DOMContentLoaded", () => {
 
-  setTimeout(() => {
-    handleIndex = (handleIndex + 1) % handles.length;
-    handleText.textContent = handles[handleIndex];
-    handleText.style.opacity = 1;
-  }, 250);
-}, 3000);
+    initMobileMenu();
 
-const menuBtn = document.getElementById("menuBtn");
-const menuPanel = document.getElementById("menuPanel");
+    initRevealAnimations();
 
-menuBtn.addEventListener("click", () => {
-  menuPanel.classList.toggle("is-open");
+    initNavbar();
+
+    initParallax();
+
+    initSmoothAnchors();
+
 });
 
-menuPanel.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => menuPanel.classList.remove("is-open"));
-});
 
-const backToTop = document.getElementById("backToTop");
+/*=========================================================
+MENU MOBILE
+=========================================================*/
 
-window.addEventListener("scroll", () => {
-  backToTop.classList.toggle("is-visible", window.scrollY > 600);
-});
+function initMobileMenu() {
 
-const translations = {
-  fr: {
-    menuButton: "menu",
-    navManifesto: "Manifesto",
-    navMedia: "Médias",
-    navMission: "Mission",
-    navReferences: "Références",
-    navContact: "Contact",
-    heroSubtitle: "Trail running — Cyclisme — Running",
-    introTitleSmall: "Le sport,",
-    introTitleBig: "plus fort",
-    introCopy: "Agence média dédiée aux cultures trail running, running et cyclisme.",
-    statReach: "reach mensuel",
-    statFollowers: "abonnés cumulés",
-    statAge: "18–40 ans",
-    statCollabs: "collaborations",
-    statCommunities: "communautés",
-    discoverMedia: "Découvrir les médias",
-    missionTitle: "Notre mission",
-    missionText: "Créer des ponts entre les marques, les athlètes et les communautés sportives grâce à des contenus authentiques, performants et culturellement ancrés.",
-    discover: "Découvrir",
-    contactEyebrow: "Partenariats marques",
-    contactTitle: "nous contacter",
-    contactText: "Marques, agences ou partenaires : construisons ensemble des campagnes impactantes autour du sport et de la performance.",
-    contactButton: "Nous contacter"
-  },
-  en: {
-    menuButton: "menu",
-    navManifesto: "Manifesto",
-    navMedia: "Media",
-    navMission: "Mission",
-    navReferences: "References",
-    navContact: "Contact",
-    heroSubtitle: "Trail running — Cycling — Running",
-    introTitleSmall: "Sport,",
-    introTitleBig: "stronger",
-    introCopy: "A media agency dedicated to trail running, running and cycling cultures.",
-    statReach: "monthly reach",
-    statFollowers: "combined followers",
-    statAge: "18–40 years old",
-    statCollabs: "collaborations",
-    statCommunities: "communities",
-    discoverMedia: "Discover the media",
-    missionTitle: "Our mission",
-    missionText: "We connect brands, athletes and sports communities through authentic, high-performing and culturally grounded content.",
-    discover: "Discover",
-    contactEyebrow: "Brand partnerships",
-    contactTitle: "contact us",
-    contactText: "Brands, agencies and partners: let’s build impactful campaigns around sport and performance.",
-    contactButton: "Contact us"
-  }
-};
+    const button = document.querySelector(".menu-button");
 
-const langBtn = document.getElementById("langBtn");
-let currentLang = "fr";
+    const menu = document.querySelector(".mobile-navigation");
 
-function applyTranslation(lang) {
-  document.documentElement.lang = lang;
+    if (!button || !menu) return;
 
-  document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const key = element.dataset.i18n;
-    element.textContent = translations[lang][key];
-  });
+    button.addEventListener("click", () => {
 
-  langBtn.textContent = lang === "fr" ? "EN" : "FR";
+        const opened = button.getAttribute("aria-expanded") === "true";
+
+        button.setAttribute("aria-expanded", !opened);
+
+        menu.hidden = opened;
+
+        document.body.classList.toggle("menu-open");
+
+    });
+
+    menu.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            button.setAttribute("aria-expanded", "false");
+
+            menu.hidden = true;
+
+            document.body.classList.remove("menu-open");
+
+        });
+
+    });
+
 }
 
-langBtn.addEventListener("click", () => {
-  currentLang = currentLang === "fr" ? "en" : "fr";
-  applyTranslation(currentLang);
+
+/*=========================================================
+APPARITION AU SCROLL
+=========================================================*/
+
+function initRevealAnimations() {
+
+    const elements = document.querySelectorAll(".reveal");
+
+    if (!("IntersectionObserver" in window)) {
+
+        elements.forEach(el => el.classList.add("is-visible"));
+
+        return;
+
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add("is-visible");
+
+            observer.unobserve(entry.target);
+
+        });
+
+    }, {
+
+        threshold: 0.15
+
+    });
+
+    elements.forEach(el => observer.observe(el));
+
+}
+
+
+/*=========================================================
+NAVIGATION
+=========================================================*/
+
+function initNavbar() {
+
+    const nav = document.querySelector(".site-navigation");
+
+    if (!nav) return;
+
+    let previousScroll = 0;
+
+    window.addEventListener("scroll", () => {
+
+        const current = window.scrollY;
+
+        if (current > 120) {
+
+            nav.classList.add("scrolled");
+
+        } else {
+
+            nav.classList.remove("scrolled");
+
+        }
+
+        if (current > previousScroll && current > 250) {
+
+            nav.style.transform = "translateY(-100%)";
+
+        } else {
+
+            nav.style.transform = "translateY(0)";
+
+        }
+
+        previousScroll = current;
+
+    });
+
+}
+
+
+/*=========================================================
+PARALLAX HERO
+=========================================================*/
+
+function initParallax() {
+
+    const heroImage = document.querySelector(".hero-visual");
+
+    if (!heroImage) return;
+
+    window.addEventListener("scroll", () => {
+
+        const offset = window.scrollY * 0.15;
+
+        heroImage.style.transform =
+            `translateY(${offset}px) rotate(-4deg)`;
+
+    });
+
+}
+
+
+/*=========================================================
+SCROLL FLUIDE
+=========================================================*/
+
+function initSmoothAnchors() {
+
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach(link => {
+
+        link.addEventListener("click", e => {
+
+            const id = link.getAttribute("href");
+
+            if (id === "#") return;
+
+            const target = document.querySelector(id);
+
+            if (!target) return;
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+
+                behavior: "smooth",
+
+                block: "start"
+
+            });
+
+        });
+
+    });
+
+}
+
+
+/*=========================================================
+EFFET HOVER SUR LES CARTES
+=========================================================*/
+
+document.querySelectorAll(".featured-card").forEach(card => {
+
+    card.addEventListener("mousemove", e => {
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+
+        const y = e.clientY - rect.top;
+
+        const rotateX = ((y / rect.height) - 0.5) * -6;
+
+        const rotateY = ((x / rect.width) - 0.5) * 6;
+
+        card.style.transform =
+            `perspective(800px)
+             rotateX(${rotateX}deg)
+             rotateY(${rotateY}deg)`;
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform = "none";
+
+    });
+
 });
 
-const mediaHandle = document.getElementById("mediaHandle");
 
-if (mediaHandle) {
-  const handles = ["@trail.hard", "@run.hard", "@cycling.hard"];
-  let currentHandle = 0;
+/*=========================================================
+COMPTEUR ANIMÉ
+=========================================================*/
 
-  setInterval(() => {
-    mediaHandle.classList.add("is-changing");
+const numbers = document.querySelectorAll(".statistic strong");
 
-    setTimeout(() => {
-      currentHandle = (currentHandle + 1) % handles.length;
-      mediaHandle.textContent = handles[currentHandle];
-      mediaHandle.classList.remove("is-changing");
-    }, 350);
-  }, 3000);
+const counterObserver = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (!entry.isIntersecting) return;
+
+        const el = entry.target;
+
+        const end = parseInt(el.textContent);
+
+        let current = 0;
+
+        const timer = setInterval(() => {
+
+            current++;
+
+            el.textContent = current.toString().padStart(2, "0");
+
+            if (current >= end) {
+
+                clearInterval(timer);
+
+            }
+
+        }, 60);
+
+        counterObserver.unobserve(el);
+
+    });
+
+}, {
+
+    threshold: 0.5
+
+});
+
+numbers.forEach(number => {
+
+    counterObserver.observe(number);
+
+});
+
+
+/*=========================================================
+TICKER PAUSE AU SURVOL
+=========================================================*/
+
+const ticker = document.querySelector(".ticker-content");
+
+if (ticker) {
+
+    ticker.addEventListener("mouseenter", () => {
+
+        ticker.style.animationPlayState = "paused";
+
+    });
+
+    ticker.addEventListener("mouseleave", () => {
+
+        ticker.style.animationPlayState = "running";
+
+    });
+
 }
+
+
+/*=========================================================
+ANIMATION DES IMAGES
+=========================================================*/
+
+document.querySelectorAll(".image-placeholder").forEach(image => {
+
+    image.addEventListener("mouseenter", () => {
+
+        image.style.transform = "scale(1.02)";
+
+    });
+
+    image.addEventListener("mouseleave", () => {
+
+        image.style.transform = "scale(1)";
+
+    });
+
+});
+
+
+/*=========================================================
+PRÉCHARGEMENT DES IMAGES
+=========================================================*/
+
+window.addEventListener("load", () => {
+
+    document.body.classList.add("loaded");
+
+});
+
+
+/*=========================================================
+FIN
+=========================================================*/
