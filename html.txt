@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Votre nom — Création, projets et médias</title>
+
+  <meta
+    name="description"
+    content="Découvrez mes projets, mes collaborations, mes contenus médias et mon univers créatif."
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+  >
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navigation principale -->
+
+  <nav class="container-fluid site-navigation">
+    <ul>
+      <li>
+        <a href="index.html" class="brand" aria-label="Retour à l'accueil">
+          <strong>
+            VOTRE NOM
+            <span>STUDIO</span>
+          </strong>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="desktop-navigation">
+      <li>
+        <a href="#apropos">À propos</a>
+      </li>
+
+      <li>
+        <a href="projets.html">Projets</a>
+      </li>
+
+      <li>
+        <a href="medias.html">Médias</a>
+      </li>
+
+      <li>
+        <a href="#contact" role="button">Contact</a>
+      </li>
+    </ul>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Menu
+    </button>
+  </nav>
+
+
+  <!-- Navigation mobile -->
+
+  <aside
+    id="mobile-navigation"
+    class="mobile-navigation"
+    aria-label="Navigation mobile"
+    hidden
+  >
+    <a href="index.html">Accueil</a>
+    <a href="#apropos">À propos</a>
+    <a href="projets.html">Projets</a>
+    <a href="medias.html">Médias</a>
+    <a href="#contact">Contact</a>
+  </aside>
+
+
+  <!-- Contenu principal -->
+
+  <main class="container">
+
+    <div class="grid">
+
+      <!-- Hero -->
+
+      <section class="hero">
+
+        <div class="hero-content">
+
+          <p class="eyebrow reveal">
+            Création — Projets — Médias
+          </p>
+
+          <hgroup class="reveal">
+            <h2>
+              Créer.<br>
+              Raconter.<br>
+              Marquer.
+            </h2>
+
+            <h3>
+              Une identité créative construite autour des idées,
+              des rencontres et des projets.
+            </h3>
+          </hgroup>
+
+          <p class="hero-description reveal">
+            Remplace ce texte par ta présentation actuelle.
+            Cette nouvelle structure permet de conserver tes informations
+            tout en donnant au site une identité plus forte, plus éditoriale
+            et plus moderne.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a href="projets.html" class="button-pill button-dark">
+              Voir les projets
+            </a>
+
+            <a href="#contact" class="button-pill">
+              Me contacter
+            </a>
+          </div>
+
+        </div>
+
+
+        <!-- Image principale à ajouter plus tard -->
+
+        <figure class="hero-visual reveal">
+
+          <div class="image-placeholder image-yellow">
+            <span>
+              Image principale
+              <small>assets/images/hero.webp</small>
+            </span>
+          </div>
+
+          <figcaption>
+            <a href="projets.html" target="_blank">
+              Découvrir les projets
+            </a>
+          </figcaption>
+
+        </figure>
+
+
+        <h3 class="screen-reader-only">
+          Présentation du portfolio
+        </h3>
+
+        <p class="screen-reader-only">
+          Présentation générale des projets, des médias et de l’activité.
+        </p>
+
+        <h3 class="screen-reader-only">
+          Navigation vers les contenus
+        </h3>
+
+        <p class="screen-reader-only">
+          Accès aux projets et aux contenus médias.
+        </p>
+
+      </section>
+
+
+      <!-- Bandeau animé -->
+
+      <section class="ticker" aria-label="Domaines d'activité">
+
+        <div class="ticker-content">
+          PROJETS • MÉDIAS • CRÉATION • IDENTITÉ •
+          PROJETS • MÉDIAS • CRÉATION • IDENTITÉ •
+        </div>
+
+      </section>
+
+
+      <!-- Manifeste -->
+
+      <section class="manifesto reveal">
+
+        <p class="eyebrow">
+          Notre approche
+        </p>
+
+        <h3>
+          Des histoires visuelles qui restent.
+        </h3>
+
+        <p>
+          Cette section peut accueillir ton texte de présentation actuel,
+          ta mission, ta démarche ou une description de ton activité.
+          La mise en page conserve un rythme très éditorial avec de grands
+          titres, des espaces généreux et des contrastes forts.
+        </p>
+
+      </section>
+
+
+      <!-- Section chiffres -->
+
+      <section class="statistics" aria-labelledby="statistics-title">
+
+        <div class="statistics-introduction reveal">
+
+          <span class="large-arrow" aria-hidden="true">
+            →
+          </span>
+
+          <h3 id="statistics-title">
+            Ton univers en quelques chiffres
+          </h3>
+
+        </div>
+
+
+        <div class="statistics-list">
+
+          <article class="statistic reveal">
+            <strong>01</strong>
+            <span>Présentation</span>
+          </article>
+
+          <article class="statistic reveal">
+            <strong>02</strong>
+            <span>Projets</span>
+          </article>
+
+          <article class="statistic reveal">
+            <strong>03</strong>
+            <span>Médias</span>
+          </article>
+
+          <article class="statistic reveal">
+            <strong>04</strong>
+            <span>Collaborations</span>
+          </article>
+
+          <article class="statistic reveal">
+            <strong>05</strong>
+            <span>Actualités</span>
+          </article>
+
+          <article class="statistic reveal">
+            <strong>06</strong>
+            <span>Contact</span>
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- Projets et médias -->
+
+      <section class="featured-content">
+
+        <article class="featured-card reveal">
+
+          <figure>
+
+            <div class="image-placeholder image-red image-landscape">
+              <span>
+                Image projet
+                <small>assets/images/projet-01.webp</small>
+              </span>
+            </div>
+
+            <figcaption>
+              <a href="projets.html" target="_blank">
+                Portfolio
+              </a>
+            </figcaption>
+
+          </figure>
+
+          <h3>
+            Projets sélectionnés
+          </h3>
+
+          <p>
+            Présente ici tes principales réalisations,
+            tes collaborations ou les projets dont tu es le plus fier.
+          </p>
+
+          <a href="projets.html" class="text-link">
+            Explorer les projets →
+          </a>
+
+        </article>
+
+
+        <article class="featured-card reveal">
+
+          <figure>
+
+            <div class="image-placeholder image-blue image-landscape">
+              <span>
+                Image média
+                <small>assets/images/media-01.webp</small>
+              </span>
+            </div>
+
+            <figcaption>
+              <a href="medias.html" target="_blank">
+                Médias
+              </a>
+            </figcaption>
+
+          </figure>
+
+          <h3>
+            Présence média
+          </h3>
+
+          <p>
+            Regroupe ici tes entrevues, vidéos,
+            articles, podcasts et autres apparitions.
+          </p>
+
+          <a href="medias.html" class="text-link">
+            Explorer les médias →
+          </a>
+
+        </article>
+
+      </section>
+
+
+      <!-- À propos -->
+
+      <section id="apropos" class="about-section">
+
+        <div class="about-content reveal">
+
+          <p class="eyebrow">
+            À propos
+          </p>
+
+          <h3>
+            Une identité simple, directe et vivante.
+          </h3>
+
+          <p>
+            Remplace ce texte par ta biographie,
+            ta présentation professionnelle ou la description
+            actuellement présente sur ton site.
+          </p>
+
+          <p>
+            Tu peux également ajouter ici ton parcours,
+            tes spécialités, tes valeurs et les types de projets
+            sur lesquels tu souhaites travailler.
+          </p>
+
+          <a href="#contact" class="button-pill">
+            Parler d’un projet
+          </a>
+
+        </div>
+
+
+        <figure class="about-visual reveal">
+
+          <div class="image-placeholder image-green image-square">
+            <span>
+              Portrait
+              <small>assets/images/portrait.webp</small>
+            </span>
+          </div>
+
+          <figcaption>
+            <a href="#contact" target="_blank">
+              Votre nom ou votre studio
+            </a>
+          </figcaption>
+
+        </figure>
+
+      </section>
+
+
+      <!-- Phrase finale -->
+
+      <section class="closing-statement reveal">
+
+        <h3>
+          Simple.<br>
+          Direct.<br>
+          Mémorable.
+        </h3>
+
+        <p>
+          Une structure conçue pour accueillir tes vrais contenus
+          et tes futures images, sans compliquer la gestion du site.
+        </p>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <!-- Contact -->
+
+  <section
+    id="contact"
+    class="contact-section"
+    aria-label="Subscribe example"
+  >
+
+    <div class="container">
+
+      <article>
+
+        <hgroup>
+          <h2>
+            Restons en contact.
+          </h2>
+
+          <h3>
+            Une idée, un projet ou une collaboration ?
+            Écris-moi.
+          </h3>
+        </hgroup>
+
+
+        <form
+          class="grid"
+          action="mailto:votre@email.com"
+          method="post"
+          enctype="text/plain"
+        >
+
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Prénom"
+            aria-label="Prénom"
+            required
+          >
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Adresse e-mail"
+            aria-label="Adresse e-mail"
+            required
+          >
+
+          <button type="submit">
+            Envoyer
+          </button>
+
+        </form>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="container site-footer">
+
+    <div class="footer-brand">
+      <strong>
+        VOTRE NOM<br>
+        STUDIO
+      </strong>
+    </div>
+
+    <div class="footer-navigation">
+
+      <small>
+        <a href="index.html">Accueil</a>
+        •
+        <a href="projets.html">Projets</a>
+        •
+        <a href="medias.html">Médias</a>
+      </small>
+
+      <small>
+        <a href="#" target="_blank" rel="noopener">
+          Instagram
+        </a>
+        •
+        <a href="#" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+        •
+        <a href="mailto:votre@email.com">
+          E-mail
+        </a>
+      </small>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

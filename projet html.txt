@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Projets — Votre nom</title>
+
+  <meta
+    name="description"
+    content="Découvrez une sélection de projets, collaborations et réalisations."
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+  >
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+  <nav class="container-fluid site-navigation">
+    <ul>
+      <li>
+        <a href="index.html" class="brand" aria-label="Retour à l'accueil">
+          <strong>
+            VOTRE NOM
+            <span>STUDIO</span>
+          </strong>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="desktop-navigation">
+      <li>
+        <a href="index.html#apropos">À propos</a>
+      </li>
+
+      <li>
+        <a href="projets.html" aria-current="page">Projets</a>
+      </li>
+
+      <li>
+        <a href="medias.html">Médias</a>
+      </li>
+
+      <li>
+        <a href="#contact" role="button">Contact</a>
+      </li>
+    </ul>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Menu
+    </button>
+  </nav>
+
+
+  <aside
+    id="mobile-navigation"
+    class="mobile-navigation"
+    aria-label="Navigation mobile"
+    hidden
+  >
+    <a href="index.html">Accueil</a>
+    <a href="index.html#apropos">À propos</a>
+    <a href="projets.html">Projets</a>
+    <a href="medias.html">Médias</a>
+    <a href="#contact">Contact</a>
+  </aside>
+
+
+  <main class="container">
+
+    <div class="grid">
+
+      <section class="project-page-hero">
+
+        <p class="eyebrow reveal">
+          Portfolio — Sélection
+        </p>
+
+        <hgroup class="reveal">
+          <h2>
+            Projets<br>
+            sélectionnés.
+          </h2>
+
+          <h3>
+            Une collection de réalisations, collaborations
+            et expériences créatives.
+          </h3>
+        </hgroup>
+
+        <p class="project-page-introduction reveal">
+          Remplace ce texte par l’introduction actuellement présente
+          sur ta page Projets. Tu peux expliquer ici ta démarche,
+          les domaines dans lesquels tu travailles et le type
+          de collaborations que tu recherches.
+        </p>
+
+        <figure class="project-page-cover reveal">
+
+          <div class="image-placeholder image-red project-cover-image">
+            <span>
+              Image principale des projets
+              <small>assets/images/projets-header.webp</small>
+            </span>
+          </div>
+
+          <figcaption>
+            <a href="#projets-list" target="_blank">
+              Voir la sélection
+            </a>
+          </figcaption>
+
+        </figure>
+
+        <h3 class="screen-reader-only">
+          Présentation des projets
+        </h3>
+
+        <p class="screen-reader-only">
+          Liste des projets et collaborations du portfolio.
+        </p>
+
+        <h3 class="screen-reader-only">
+          Navigation dans la page
+        </h3>
+
+        <p class="screen-reader-only">
+          Accès aux différentes réalisations.
+        </p>
+
+      </section>
+
+
+      <section class="ticker" aria-label="Catégories de projets">
+
+        <div class="ticker-content">
+          IDENTITÉ • DIRECTION ARTISTIQUE • DIGITAL • CAMPAGNES •
+          IDENTITÉ • DIRECTION ARTISTIQUE • DIGITAL • CAMPAGNES •
+        </div>
+
+      </section>
+
+
+      <section
+        id="projets-list"
+        class="projects-list"
+        aria-label="Liste des projets"
+      >
+
+        <article class="project-entry reveal">
+
+          <div class="project-number">
+            01
+          </div>
+
+          <figure class="project-image">
+
+            <div class="image-placeholder image-yellow image-landscape">
+              <span>
+                Projet 01
+                <small>assets/images/projet-01.webp</small>
+              </span>
+            </div>
+
+            <figcaption>
+              <a href="#" target="_blank" rel="noopener">
+                Voir le projet
+              </a>
+            </figcaption>
+
+          </figure>
+
+          <div class="project-content">
+
+            <p class="eyebrow">
+              Identité — 2026
+            </p>
+
+            <h3>
+              Titre du premier projet
+            </h3>
+
+            <p>
+              Ajoute ici la description de ton projet.
+              Explique le contexte, les objectifs, ton rôle,
+              les choix créatifs et les résultats obtenus.
+            </p>
+
+            <div class="project-details">
+              <span>Direction artistique</span>
+              <span>Identité visuelle</span>
+              <span>Production</span>
+            </div>
+
+            <a href="#" class="text-link">
+              Découvrir le projet →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="project-entry project-entry-reverse reveal">
+
+          <div class="project-number">
+            02
+          </div>
+
+          <figure class="project-image">
+
+            <div class="image-placeholder image-blue image-landscape">
+              <span>
+                Projet 02
+                <small>assets/images/projet-02.webp</small>
+              </span>
+            </div>
+
+            <figcaption>
+              <a href="#" target="_blank" rel="noopener">
+                Voir le projet
+              </a>
+            </figcaption>
+
+          </figure>
+
+          <div class="project-content">
+
+            <p class="eyebrow">
+              Campagne — 2026
+            </p>
+
+            <h3>
+              Titre du deuxième projet
+            </h3>
+
+            <p>
+              Utilise cet espace pour détailler une campagne,
+              une collaboration ou une production récente.
+              Tu peux aussi ajouter les partenaires impliqués.
+            </p>
+
+            <div class="project-details">
+              <span>Concept</span>
+              <span>Campagne</span>
+              <span>Contenu</span>
+            </div>
+
+            <a href="#" class="text-link">
+              Découvrir le projet →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="project-entry reveal">
+
+          <div class="project-number">
+            03
+          </div>
+
+          <figure class="project-image">
+
+            <div class="image-placeholder image-green image-landscape">
+              <span>
+                Projet 03
+                <small>assets/images/projet-03.webp</small>
+              </span>
+            </div>
+
+            <figcaption>
+              <a href="#" target="_blank" rel="noopener">
+                Voir le projet
+              </a>
+            </figcaption>
+
+          </figure>
+
+          <div class="project-content">
+
+            <p class="eyebrow">
+              Production — 2025
+            </p>
+
+            <h3>
+              Titre du troisième projet
+            </h3>
+
+            <p>
+              Présente ici une réalisation importante.
+              Le texte peut décrire le processus, les contraintes,
+              les outils utilisés et l’impact du projet.
+            </p>
+
+            <div class="project-details">
+              <span>Production</span>
+              <span>Stratégie</span>
+              <span>Diffusion</span>
+            </div>
+
+            <a href="#" class="text-link">
+              Découvrir le projet →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="project-entry project-entry-reverse reveal">
+
+          <div class="project-number">
+            04
+          </div>
+
+          <figure class="project-image">
+
+            <div class="image-placeholder image-violet image-landscape">
+              <span>
+                Projet 04
+                <small>assets/images/projet-04.webp</small>
+              </span>
+            </div>
+
+            <figcaption>
+              <a href="#" target="_blank" rel="noopener">
+                Voir le projet
+              </a>
+            </figcaption>
+
+          </figure>
+
+          <div class="project-content">
+
+            <p class="eyebrow">
+              Éditorial — 2025
+            </p>
+
+            <h3>
+              Titre du quatrième projet
+            </h3>
+
+            <p>
+              Cette entrée peut accueillir un projet éditorial,
+              un événement, une série de contenus ou une expérience
+              réalisée avec une marque ou une organisation.
+            </p>
+
+            <div class="project-details">
+              <span>Éditorial</span>
+              <span>Design</span>
+              <span>Communication</span>
+            </div>
+
+            <a href="#" class="text-link">
+              Découvrir le projet →
+            </a>
+
+          </div>
+
+        </article>
+
+      </section>
+
+
+      <section class="project-cta reveal">
+
+        <p class="eyebrow">
+          Nouveau projet
+        </p>
+
+        <h3>
+          Construisons quelque chose de fort.
+        </h3>
+
+        <p>
+          Une campagne, une identité, un contenu ou une collaboration ?
+          Présente ton idée et lançons la discussion.
+        </p>
+
+        <a href="#contact" class="button-pill button-dark">
+          Démarrer un projet
+        </a>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <section
+    id="contact"
+    class="contact-section"
+    aria-label="Subscribe example"
+  >
+
+    <div class="container">
+
+      <article>
+
+        <hgroup>
+          <h2>
+            Un projet en tête ?
+          </h2>
+
+          <h3>
+            Parle-moi de ta prochaine collaboration.
+          </h3>
+        </hgroup>
+
+        <form
+          class="grid"
+          action="mailto:votre@email.com"
+          method="post"
+          enctype="text/plain"
+        >
+
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Prénom"
+            aria-label="Prénom"
+            required
+          >
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Adresse e-mail"
+            aria-label="Adresse e-mail"
+            required
+          >
+
+          <button type="submit">
+            Envoyer
+          </button>
+
+        </form>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <footer class="container site-footer">
+
+    <div class="footer-brand">
+      <strong>
+        VOTRE NOM<br>
+        STUDIO
+      </strong>
+    </div>
+
+    <div class="footer-navigation">
+
+      <small>
+        <a href="index.html">Accueil</a>
+        •
+        <a href="projets.html">Projets</a>
+        •
+        <a href="medias.html">Médias</a>
+      </small>
+
+      <small>
+        <a href="#" target="_blank" rel="noopener">
+          Instagram
+        </a>
+        •
+        <a href="#" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+        •
+        <a href="mailto:votre@email.com">
+          E-mail
+        </a>
+      </small>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

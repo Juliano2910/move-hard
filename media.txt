@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Médias — Votre nom</title>
+
+  <meta
+    name="description"
+    content="Découvrez les articles, entrevues, vidéos, podcasts et publications liés à mon travail."
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+  >
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+  <nav class="container-fluid site-navigation">
+    <ul>
+      <li>
+        <a href="index.html" class="brand" aria-label="Retour à l'accueil">
+          <strong>
+            VOTRE NOM
+            <span>STUDIO</span>
+          </strong>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="desktop-navigation">
+      <li>
+        <a href="index.html#apropos">À propos</a>
+      </li>
+
+      <li>
+        <a href="projets.html">Projets</a>
+      </li>
+
+      <li>
+        <a href="medias.html" aria-current="page">Médias</a>
+      </li>
+
+      <li>
+        <a href="#contact" role="button">Contact</a>
+      </li>
+    </ul>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Menu
+    </button>
+  </nav>
+
+
+  <aside
+    id="mobile-navigation"
+    class="mobile-navigation"
+    aria-label="Navigation mobile"
+    hidden
+  >
+    <a href="index.html">Accueil</a>
+    <a href="index.html#apropos">À propos</a>
+    <a href="projets.html">Projets</a>
+    <a href="medias.html">Médias</a>
+    <a href="#contact">Contact</a>
+  </aside>
+
+
+  <main class="container">
+
+    <div class="grid">
+
+      <section class="media-page-hero">
+
+        <p class="eyebrow reveal">
+          Presse — Vidéo — Audio
+        </p>
+
+        <hgroup class="reveal">
+          <h2>
+            Médias &<br>
+            publications.
+          </h2>
+
+          <h3>
+            Articles, entrevues, vidéos, podcasts
+            et apparitions publiques.
+          </h3>
+        </hgroup>
+
+        <p class="media-page-introduction reveal">
+          Remplace ce texte par l’introduction déjà présente
+          sur ta page Médias. Tu peux expliquer ici les sujets
+          que tu abordes, les formats auxquels tu participes
+          et les collaborations éditoriales que tu recherches.
+        </p>
+
+        <figure class="media-page-cover reveal">
+
+          <div class="image-placeholder image-violet media-cover-image">
+            <span>
+              Image principale des médias
+              <small>assets/images/medias-header.webp</small>
+            </span>
+          </div>
+
+          <figcaption>
+            <a href="#media-list" target="_blank">
+              Explorer les publications
+            </a>
+          </figcaption>
+
+        </figure>
+
+        <h3 class="screen-reader-only">
+          Présentation des médias
+        </h3>
+
+        <p class="screen-reader-only">
+          Liste des articles, entrevues, vidéos et podcasts.
+        </p>
+
+        <h3 class="screen-reader-only">
+          Navigation dans les publications
+        </h3>
+
+        <p class="screen-reader-only">
+          Accès aux différentes apparitions et publications.
+        </p>
+
+      </section>
+
+
+      <section class="ticker" aria-label="Formats médias">
+
+        <div class="ticker-content">
+          ARTICLES • ENTREVUES • PODCASTS • VIDÉOS •
+          ARTICLES • ENTREVUES • PODCASTS • VIDÉOS •
+        </div>
+
+      </section>
+
+
+      <section
+        id="media-list"
+        class="media-list"
+        aria-label="Liste des publications"
+      >
+
+        <article class="media-entry media-entry-featured reveal">
+
+          <figure class="media-entry-image">
+
+            <div class="image-placeholder image-red media-featured-image">
+              <span>
+                Publication principale
+                <small>assets/images/media-01.webp</small>
+              </span>
+            </div>
+
+            <figcaption>
+              <a href="#" target="_blank" rel="noopener">
+                Nom du média
+              </a>
+            </figcaption>
+
+          </figure>
+
+          <div class="media-entry-content">
+
+            <p class="eyebrow">
+              Entrevue — 2026
+            </p>
+
+            <h3>
+              Titre de la publication principale
+            </h3>
+
+            <p>
+              Ajoute ici un résumé de l’article, de l’entrevue
+              ou de la vidéo. Présente le sujet abordé,
+              le média concerné et le contexte de la publication.
+            </p>
+
+            <div class="media-meta">
+              <span>Entrevue</span>
+              <span>15 min</span>
+              <span>2026</span>
+            </div>
+
+            <a
+              href="#"
+              class="button-pill button-dark"
+              target="_blank"
+              rel="noopener"
+            >
+              Consulter
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <div class="media-card-grid">
+
+          <article class="media-card reveal">
+
+            <figure>
+
+              <div class="image-placeholder image-yellow image-landscape">
+                <span>
+                  Média 02
+                  <small>assets/images/media-02.webp</small>
+                </span>
+              </div>
+
+              <figcaption>
+                <a href="#" target="_blank" rel="noopener">
+                  Nom du média
+                </a>
+              </figcaption>
+
+            </figure>
+
+            <p class="eyebrow">
+              Podcast — 2026
+            </p>
+
+            <h3>
+              Titre de la deuxième publication
+            </h3>
+
+            <p>
+              Résumé court de l’épisode, du thème abordé
+              ou de la conversation.
+            </p>
+
+            <a
+              href="#"
+              class="text-link"
+              target="_blank"
+              rel="noopener"
+            >
+              Écouter →
+            </a>
+
+          </article>
+
+
+          <article class="media-card reveal">
+
+            <figure>
+
+              <div class="image-placeholder image-blue image-landscape">
+                <span>
+                  Média 03
+                  <small>assets/images/media-03.webp</small>
+                </span>
+              </div>
+
+              <figcaption>
+                <a href="#" target="_blank" rel="noopener">
+                  Nom du média
+                </a>
+              </figcaption>
+
+            </figure>
+
+            <p class="eyebrow">
+              Article — 2025
+            </p>
+
+            <h3>
+              Titre de la troisième publication
+            </h3>
+
+            <p>
+              Résumé court de l’article, de son angle
+              et des principaux sujets présentés.
+            </p>
+
+            <a
+              href="#"
+              class="text-link"
+              target="_blank"
+              rel="noopener"
+            >
+              Lire →
+            </a>
+
+          </article>
+
+
+          <article class="media-card reveal">
+
+            <figure>
+
+              <div class="image-placeholder image-green image-landscape">
+                <span>
+                  Média 04
+                  <small>assets/images/media-04.webp</small>
+                </span>
+              </div>
+
+              <figcaption>
+                <a href="#" target="_blank" rel="noopener">
+                  Nom du média
+                </a>
+              </figcaption>
+
+            </figure>
+
+            <p class="eyebrow">
+              Vidéo — 2025
+            </p>
+
+            <h3>
+              Titre de la quatrième publication
+            </h3>
+
+            <p>
+              Résumé court de la vidéo, de l’événement
+              ou de l’apparition publique.
+            </p>
+
+            <a
+              href="#"
+              class="text-link"
+              target="_blank"
+              rel="noopener"
+            >
+              Regarder →
+            </a>
+
+          </article>
+
+
+          <article class="media-card reveal">
+
+            <figure>
+
+              <div class="image-placeholder image-orange image-landscape">
+                <span>
+                  Média 05
+                  <small>assets/images/media-05.webp</small>
+                </span>
+              </div>
+
+              <figcaption>
+                <a href="#" target="_blank" rel="noopener">
+                  Nom du média
+                </a>
+              </figcaption>
+
+            </figure>
+
+            <p class="eyebrow">
+              Conférence — 2025
+            </p>
+
+            <h3>
+              Titre de la cinquième publication
+            </h3>
+
+            <p>
+              Résumé court de la conférence,
+              du sujet présenté ou de l’intervention.
+            </p>
+
+            <a
+              href="#"
+              class="text-link"
+              target="_blank"
+              rel="noopener"
+            >
+              Découvrir →
+            </a>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <section class="press-quote reveal">
+
+        <blockquote>
+          « Une citation tirée d’un article, d’une entrevue
+          ou d’une publication peut apparaître ici. »
+        </blockquote>
+
+        <p>
+          — Nom du média, année
+        </p>
+
+      </section>
+
+
+      <section class="media-cta reveal">
+
+        <p class="eyebrow">
+          Presse & collaborations
+        </p>
+
+        <h3>
+          Une demande média ?
+        </h3>
+
+        <p>
+          Pour une entrevue, une invitation, une conférence
+          ou une collaboration éditoriale, utilise le formulaire
+          ci-dessous ou écris directement par e-mail.
+        </p>
+
+        <a
+          href="mailto:votre@email.com"
+          class="button-pill"
+        >
+          Écrire un e-mail
+        </a>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <section
+    id="contact"
+    class="contact-section"
+    aria-label="Subscribe example"
+  >
+
+    <div class="container">
+
+      <article>
+
+        <hgroup>
+          <h2>
+            Restons en contact.
+          </h2>
+
+          <h3>
+            Une demande média ou une collaboration ?
+            Écris-moi.
+          </h3>
+        </hgroup>
+
+        <form
+          class="grid"
+          action="mailto:votre@email.com"
+          method="post"
+          enctype="text/plain"
+        >
+
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Prénom"
+            aria-label="Prénom"
+            required
+          >
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Adresse e-mail"
+            aria-label="Adresse e-mail"
+            required
+          >
+
+          <button type="submit">
+            Envoyer
+          </button>
+
+        </form>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <footer class="container site-footer">
+
+    <div class="footer-brand">
+      <strong>
+        VOTRE NOM<br>
+        STUDIO
+      </strong>
+    </div>
+
+    <div class="footer-navigation">
+
+      <small>
+        <a href="index.html">Accueil</a>
+        •
+        <a href="projets.html">Projets</a>
+        •
+        <a href="medias.html">Médias</a>
+      </small>
+
+      <small>
+        <a href="#" target="_blank" rel="noopener">
+          Instagram
+        </a>
+        •
+        <a href="#" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+        •
+        <a href="mailto:votre@email.com">
+          E-mail
+        </a>
+      </small>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
