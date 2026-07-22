@@ -1,144 +1,515 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Move Hard Media</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Votre nom — Création, projets et médias</title>
+
+  <meta
+    name="description"
+    content="Découvrez mes projets, mes collaborations, mes contenus médias et mon univers créatif."
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+  >
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="assets/js/main.js" defer></script>
 </head>
 
 <body>
 
-    <header class="hero light-header" id="top">
-    <div class="mini-logo">MHM</div>
+  <!-- Navigation principale -->
 
-    <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu" data-i18n="menuButton">menu</button>
+  <nav class="container-fluid site-navigation">
+    <ul>
+      <li>
+        <a href="index.html" class="brand" aria-label="Retour à l'accueil">
+          <strong>
+            VOTRE NOM
+            <span>STUDIO</span>
+          </strong>
+        </a>
+      </li>
+    </ul>
 
-    <nav class="menu-panel" id="menuPanel" aria-label="Navigation principale">
-        <a href="#intro" data-i18n="navManifesto">Manifesto</a>
-        <a href="#medias" data-i18n="navMedia">Médias</a>
-        <a href="#mission" data-i18n="navMission">Mission</a>
-        <a href="#references" data-i18n="navReferences">Références</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
-        <button class="lang-btn" id="langBtn" type="button">EN</button>
-    </nav>
+    <ul class="desktop-navigation">
+      <li>
+        <a href="#apropos">À propos</a>
+      </li>
 
-    <div class="hero-content">
-        <h1>Move Hard<br />Media</h1>
-        <p data-i18n="heroSubtitle">Trail running — Cyclisme — Running</p>
-    </div>
+      <li>
+        <a href="projets.html">Projets</a>
+      </li>
 
-    <a href="#intro" class="down-btn" aria-label="Descendre">↓</a>
-</header>
+      <li>
+        <a href="medias.html">Médias</a>
+      </li>
 
-<section class="intro" id="intro">
-    <div class="intro-visual">
-        <img class="tiny-photo" src="trail4.jpg" alt="Groupe en montagne" />
-        <h2 class="big-title">
-            <span class="small-line" data-i18n="introTitleSmall">Le sport,</span>
-            <span class="big-line" data-i18n="introTitleBig">plus fort</span>
-        </h2>
-    </div>
+      <li>
+        <a href="#contact" role="button">Contact</a>
+      </li>
+    </ul>
 
-    <div class="intro-text">
-        <p class="intro-copy" data-i18n="introCopy">Agence média dédiée aux cultures trail running, running et cyclisme.</p>
-        <div class="floating-images">
-            <img src="running3.jpg" alt="Coureurs" />
-            <img src="bike3.jpg" alt="Cycliste" />
+    <button
+      class="menu-button"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >
+      Menu
+    </button>
+  </nav>
+
+
+  <!-- Navigation mobile -->
+
+  <aside
+    id="mobile-navigation"
+    class="mobile-navigation"
+    aria-label="Navigation mobile"
+    hidden
+  >
+    <a href="index.html">Accueil</a>
+    <a href="#apropos">À propos</a>
+    <a href="projets.html">Projets</a>
+    <a href="medias.html">Médias</a>
+    <a href="#contact">Contact</a>
+  </aside>
+
+
+  <!-- Contenu principal -->
+
+  <main class="container">
+
+    <div class="grid">
+
+      <!-- Hero -->
+
+      <section class="hero">
+
+        <div class="hero-content">
+
+          <p class="eyebrow reveal">
+            Création — Projets — Médias
+          </p>
+
+          <hgroup class="reveal">
+            <h2>
+              Créer.<br>
+              Raconter.<br>
+              Marquer.
+            </h2>
+
+            <h3>
+              Une identité créative construite autour des idées,
+              des rencontres et des projets.
+            </h3>
+          </hgroup>
+
+          <p class="hero-description reveal">
+            Remplace ce texte par ta présentation actuelle.
+            Cette nouvelle structure permet de conserver tes informations
+            tout en donnant au site une identité plus forte, plus éditoriale
+            et plus moderne.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a href="projets.html" class="button-pill button-dark">
+              Voir les projets
+            </a>
+
+            <a href="#contact" class="button-pill">
+              Me contacter
+            </a>
+          </div>
+
         </div>
-    </div>
-</section>
 
-<section class="stats-carousel" aria-label="Statistiques des médias">
-    <div class="stats-mask">
-        <div class="stats-row">
-            <div class="stat-pill"><strong>2M</strong><span data-i18n="statReach">reach mensuel</span></div>
-            <div class="stat-pill"><strong>+25K</strong><span data-i18n="statFollowers">abonnés cumulés</span></div>
-            <div class="stat-pill"><strong>90%</strong><span data-i18n="statAge">18–40 ans</span></div>
-            <div class="stat-pill"><strong>+10</strong><span data-i18n="statCollabs">collaborations</span></div>
-            <div class="stat-pill"><strong>3</strong><span data-i18n="statCommunities">communautés</span></div>
-            
-            <div class="stat-pill"><strong>2M</strong><span data-i18n="statReach">reach mensuel</span></div>
-            <div class="stat-pill"><strong>+25K</strong><span data-i18n="statFollowers">abonnés cumulés</span></div>
-            <div class="stat-pill"><strong>90%</strong><span data-i18n="statAge">18–40 ans</span></div>
-            <div class="stat-pill"><strong>+10</strong><span data-i18n="statCollabs">collaborations</span></div>
-            <div class="stat-pill"><strong>3</strong><span data-i18n="statCommunities">communautés</span></div>
-        </div>
-    </div>
-</section>
 
-    <section class="medias reveal" id="medias">
-        <h2 class="handle" id="handleText">@trail.hard</h2>
-        <div class="media-carousel">
-            <div class="media-track">
-                <img src="bike2.jpg" alt="Cyclisme" />
-                <img src="trail2.jpg" alt="Trail running" />
-                <img src="running2.jpg" alt="Running urbain" />
-                <img src="bike2.jpg" alt="Cyclisme" />
-                <img src="trail2.jpg" alt="Trail montagne" />
-                <img src="running2.jpg" alt="Running route" />
-                <img src="bike2.jpg" alt="Cyclisme" />
-                <img src="trail2.jpg" alt="Trail running" />
-                <img src="running2.jpg" alt="Running urbain" />
-                <img src="bike2.jpg" alt="Trail montagne" />
-                <img src="trail2.jpg" alt="Trail montagne" />
-                <img src="running2.jpg" alt="Running route" />
-            </div>
-        </div>
-        <div class="center-button">
-            <a class="btn" href="medias.html">Découvrir les médias</a>
-        </div>
-    </section>
+        <!-- Image principale à ajouter plus tard -->
 
-    <section class="mission reveal" id="mission">
-        <h2 class="section-title" data-i18n="missionTitle">Notre mission</h2>
-        <img class="mission-image" src="mission.jpg" alt="Événement sportif" />
-        <p data-i18n="missionText">
-            <strong> 
-                Créer des ponts entre les <mark>marques, les athlètes et les communautés sportives</mark> 
-                grâce à des contenus authentiques, performants et culturellement ancrés. 
-            </strong>
-        </p>
-        <a class="btn" href="projets.html">Découvrir</a>
-    </section>
+        <figure class="hero-visual reveal">
 
-    <section class="logos-carousel" id="references">
-        <div class="logos-track">
-            <span>Andros Sport</span>
-            <span>Kiprun</span>
-            <span>Asics</span>
-            <span>Merrell</span>
-            <span>La Sportiva</span>
-            <span>Saucony</span>
-            <span>Cantal Auvergne</span>
-            <span>Andros Sport</span>
-            <span>Kiprun</span>
-            <span>Merrell</span>
-            <span>La Sportiva</span>
-            <span>Saucony</span>
-            <span>Cantal Auvergne</span>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="contact-card reveal">
-            <span class="eyebrow" data-i18n="contactEyebrow">
-                <span class="highlight-green">Partenariats marques</span>
+          <div class="image-placeholder image-yellow">
+            <span>
+              Image principale
+              <small>assets/images/hero.webp</small>
             </span>
-            <h2 data-i18n="contactTitle">Nous contacter</h2>
-            <p data-i18n="contactText">Marques, agences ou partenaires : construisons ensemble des campagnes impactantes autour du sport et de la performance.</p>
-            <p><strong>Email :</strong> contact@move-hard.com</p>
-            <a class="btn" href="mailto:contact@move-hard.com" data-i18n="contactButton">Nous contacter</a>
+          </div>
+
+          <figcaption>
+            <a href="projets.html" target="_blank">
+              Découvrir les projets
+            </a>
+          </figcaption>
+
+        </figure>
+
+
+        <h3 class="screen-reader-only">
+          Présentation du portfolio
+        </h3>
+
+        <p class="screen-reader-only">
+          Présentation générale des projets, des médias et de l’activité.
+        </p>
+
+        <h3 class="screen-reader-only">
+          Navigation vers les contenus
+        </h3>
+
+        <p class="screen-reader-only">
+          Accès aux projets et aux contenus médias.
+        </p>
+
+      </section>
+
+
+      <!-- Bandeau animé -->
+
+      <section class="ticker" aria-label="Domaines d'activité">
+
+        <div class="ticker-content">
+          PROJETS • MÉDIAS • CRÉATION • IDENTITÉ •
+          PROJETS • MÉDIAS • CRÉATION • IDENTITÉ •
         </div>
-    </section>
 
-    <a href="#top" class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</a>
+      </section>
 
-    <script src="script.js"></script>
+
+      <!-- Manifeste -->
+
+      <section class="manifesto reveal">
+
+        <p class="eyebrow">
+          Notre approche
+        </p>
+
+        <h3>
+          Des histoires visuelles qui restent.
+        </h3>
+
+        <p>
+          Cette section peut accueillir ton texte de présentation actuel,
+          ta mission, ta démarche ou une description de ton activité.
+          La mise en page conserve un rythme très éditorial avec de grands
+          titres, des espaces généreux et des contrastes forts.
+        </p>
+
+      </section>
+
+
+      <!-- Section chiffres -->
+
+      <section class="statistics" aria-labelledby="statistics-title">
+
+        <div class="statistics-introduction reveal">
+
+          <span class="large-arrow" aria-hidden="true">
+            →
+          </span>
+
+          <h3 id="statistics-title">
+            Ton univers en quelques chiffres
+          </h3>
+
+        </div>
+
+
+        <div class="statistics-list">
+
+          <article class="statistic reveal">
+            <strong>01</strong>
+            <span>Présentation</span>
+          </article>
+
+          <article class="statistic reveal">
+            <strong>02</strong>
+            <span>Projets</span>
+          </article>
+
+          <article class="statistic reveal">
+            <strong>03</strong>
+            <span>Médias</span>
+          </article>
+
+          <article class="statistic reveal">
+            <strong>04</strong>
+            <span>Collaborations</span>
+          </article>
+
+          <article class="statistic reveal">
+            <strong>05</strong>
+            <span>Actualités</span>
+          </article>
+
+          <article class="statistic reveal">
+            <strong>06</strong>
+            <span>Contact</span>
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- Projets et médias -->
+
+      <section class="featured-content">
+
+        <article class="featured-card reveal">
+
+          <figure>
+
+            <div class="image-placeholder image-red image-landscape">
+              <span>
+                Image projet
+                <small>assets/images/projet-01.webp</small>
+              </span>
+            </div>
+
+            <figcaption>
+              <a href="projets.html" target="_blank">
+                Portfolio
+              </a>
+            </figcaption>
+
+          </figure>
+
+          <h3>
+            Projets sélectionnés
+          </h3>
+
+          <p>
+            Présente ici tes principales réalisations,
+            tes collaborations ou les projets dont tu es le plus fier.
+          </p>
+
+          <a href="projets.html" class="text-link">
+            Explorer les projets →
+          </a>
+
+        </article>
+
+
+        <article class="featured-card reveal">
+
+          <figure>
+
+            <div class="image-placeholder image-blue image-landscape">
+              <span>
+                Image média
+                <small>assets/images/media-01.webp</small>
+              </span>
+            </div>
+
+            <figcaption>
+              <a href="medias.html" target="_blank">
+                Médias
+              </a>
+            </figcaption>
+
+          </figure>
+
+          <h3>
+            Présence média
+          </h3>
+
+          <p>
+            Regroupe ici tes entrevues, vidéos,
+            articles, podcasts et autres apparitions.
+          </p>
+
+          <a href="medias.html" class="text-link">
+            Explorer les médias →
+          </a>
+
+        </article>
+
+      </section>
+
+
+      <!-- À propos -->
+
+      <section id="apropos" class="about-section">
+
+        <div class="about-content reveal">
+
+          <p class="eyebrow">
+            À propos
+          </p>
+
+          <h3>
+            Une identité simple, directe et vivante.
+          </h3>
+
+          <p>
+            Remplace ce texte par ta biographie,
+            ta présentation professionnelle ou la description
+            actuellement présente sur ton site.
+          </p>
+
+          <p>
+            Tu peux également ajouter ici ton parcours,
+            tes spécialités, tes valeurs et les types de projets
+            sur lesquels tu souhaites travailler.
+          </p>
+
+          <a href="#contact" class="button-pill">
+            Parler d’un projet
+          </a>
+
+        </div>
+
+
+        <figure class="about-visual reveal">
+
+          <div class="image-placeholder image-green image-square">
+            <span>
+              Portrait
+              <small>assets/images/portrait.webp</small>
+            </span>
+          </div>
+
+          <figcaption>
+            <a href="#contact" target="_blank">
+              Votre nom ou votre studio
+            </a>
+          </figcaption>
+
+        </figure>
+
+      </section>
+
+
+      <!-- Phrase finale -->
+
+      <section class="closing-statement reveal">
+
+        <h3>
+          Simple.<br>
+          Direct.<br>
+          Mémorable.
+        </h3>
+
+        <p>
+          Une structure conçue pour accueillir tes vrais contenus
+          et tes futures images, sans compliquer la gestion du site.
+        </p>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <!-- Contact -->
+
+  <section
+    id="contact"
+    class="contact-section"
+    aria-label="Subscribe example"
+  >
+
+    <div class="container">
+
+      <article>
+
+        <hgroup>
+          <h2>
+            Restons en contact.
+          </h2>
+
+          <h3>
+            Une idée, un projet ou une collaboration ?
+            Écris-moi.
+          </h3>
+        </hgroup>
+
+
+        <form
+          class="grid"
+          action="mailto:votre@email.com"
+          method="post"
+          enctype="text/plain"
+        >
+
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Prénom"
+            aria-label="Prénom"
+            required
+          >
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Adresse e-mail"
+            aria-label="Adresse e-mail"
+            required
+          >
+
+          <button type="submit">
+            Envoyer
+          </button>
+
+        </form>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="container site-footer">
+
+    <div class="footer-brand">
+      <strong>
+        VOTRE NOM<br>
+        STUDIO
+      </strong>
+    </div>
+
+    <div class="footer-navigation">
+
+      <small>
+        <a href="index.html">Accueil</a>
+        •
+        <a href="projets.html">Projets</a>
+        •
+        <a href="medias.html">Médias</a>
+      </small>
+
+      <small>
+        <a href="#" target="_blank" rel="noopener">
+          Instagram
+        </a>
+        •
+        <a href="#" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+        •
+        <a href="mailto:votre@email.com">
+          E-mail
+        </a>
+      </small>
+
+    </div>
+
+  </footer>
 
 </body>
 </html>
