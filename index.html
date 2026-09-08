@@ -114,7 +114,7 @@
 
 
 <!-- =========================================================
-     NOS MEDIAS
+     NOS MEDIAS - CAROUSEL
 ========================================================= -->
 
 <section class="media-section section" id="medias">
@@ -136,94 +136,69 @@
 
     </div>
 
+    <div class="media-carousel">
 
-    <div class="media-grid">
+        <div class="carousel-container">
 
-        <!-- TRAIL -->
-
-        <a href="https://www.instagram.com/trail.hard/" target="_blank" class="media-card">
-
-            <div class="media-image">
-                <img src="logo-trail-hard.png" alt="Trail Running">
-            </div>
-
-            <div class="media-card-overlay"></div>
-
-            <div class="media-card-content">
-
-                <span>01</span>
-
-                <h3>TRAIL<br>HARD</h3>
-
-                <p>
-                    TRAIL RUNNING · OUTDOOR · AVENTURE
-                </p>
-
-                <div class="media-arrow">
-                    →
+            <!-- Slide 1: TRAIL HARD -->
+            <div class="carousel-slide active">
+                <div class="carousel-content">
+                    <span class="carousel-number">01</span>
+                    <h3>TRAIL<br>HARD</h3>
+                    <p class="carousel-description">
+                        TRAIL RUNNING · OUTDOOR · AVENTURE
+                    </p>
+                    <p class="carousel-handle">@trail.hard</p>
+                    <a href="https://www.instagram.com/trail.hard/" target="_blank" class="carousel-button">
+                        Visiter sur Instagram
+                    </a>
                 </div>
-
             </div>
 
-        </a>
-
-
-        <!-- RUNNING -->
-
-        <a href="https://www.instagram.com/run.hard_/" target="_blank" class="media-card">
-
-            <div class="media-image">
-                <img src="logo-run-hard.png" alt="Running">
-            </div>
-
-            <div class="media-card-overlay"></div>
-
-            <div class="media-card-content">
-
-                <span>02</span>
-
-                <h3>RUN<br>HARD</h3>
-
-                <p>
-                    RUNNING · PERFORMANCE · CULTURE
-                </p>
-
-                <div class="media-arrow">
-                    →
+            <!-- Slide 2: RUN HARD -->
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <span class="carousel-number">02</span>
+                    <h3>RUN<br>HARD</h3>
+                    <p class="carousel-description">
+                        RUNNING · PERFORMANCE · CULTURE
+                    </p>
+                    <p class="carousel-handle">@run.hard_</p>
+                    <a href="https://www.instagram.com/run.hard_/" target="_blank" class="carousel-button">
+                        Visiter sur Instagram
+                    </a>
                 </div>
-
             </div>
 
-        </a>
-
-
-        <!-- CYCLING -->
-
-        <a href="https://www.instagram.com/cycling.hard/" target="_blank" class="media-card">
-
-            <div class="media-image">
-                <img src="logo-cycling-hard.png" alt="Cyclisme">
-            </div>
-
-            <div class="media-card-overlay"></div>
-
-            <div class="media-card-content">
-
-                <span>03</span>
-
-                <h3>CYCLING<br>HARD</h3>
-
-                <p>
-                    CYCLISME · GRAVEL · AVENTURE
-                </p>
-
-                <div class="media-arrow">
-                    →
+            <!-- Slide 3: CYCLING HARD -->
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <span class="carousel-number">03</span>
+                    <h3>CYCLING<br>HARD</h3>
+                    <p class="carousel-description">
+                        CYCLISME · GRAVEL · AVENTURE
+                    </p>
+                    <p class="carousel-handle">@cycling.hard</p>
+                    <a href="https://www.instagram.com/cycling.hard/" target="_blank" class="carousel-button">
+                        Visiter sur Instagram
+                    </a>
                 </div>
-
             </div>
 
-        </a>
+        </div>
+
+        <!-- Carousel Navigation -->
+        <div class="carousel-nav">
+            <button class="carousel-prev" aria-label="Précédent">←</button>
+            
+            <div class="carousel-dots">
+                <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+            </div>
+            
+            <button class="carousel-next" aria-label="Suivant">→</button>
+        </div>
 
     </div>
 
