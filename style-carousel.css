@@ -1,0 +1,286 @@
+/* =========================================================
+   MEDIA CAROUSEL
+========================================================= */
+
+.media-section {
+    background: var(--black);
+    color: white;
+}
+
+.media-section .section-number {
+    color: #aaa;
+}
+
+.media-section .section-description {
+    color: #aaa;
+}
+
+.media-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease-in-out;
+    padding: 60px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+.carousel-content {
+    text-align: left;
+    width: 100%;
+}
+
+.carousel-number {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.carousel-content h3 {
+    font-size: clamp(48px, 8vw, 80px);
+    line-height: 0.9;
+    letter-spacing: -3px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.carousel-description {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #aaa;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.carousel-handle {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 30px;
+}
+
+.carousel-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 25px;
+    border: 1px solid var(--accent);
+    border-radius: 2px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.carousel-button:hover {
+    background: var(--accent);
+    color: var(--black);
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   CAROUSEL NAVIGATION
+========================================================= */
+
+.carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.carousel-prev,
+.carousel-next {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(223, 255, 0, 0.05);
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--accent);
+    width: 28px;
+    border-radius: 5px;
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+/* =========================================================
+   TABLET (800px - 1024px) - CAROUSEL
+========================================================= */
+
+@media (max-width: 1024px) {
+    
+    .carousel-content h3 {
+        font-size: clamp(36px, 6vw, 60px);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE (jusqu'à 800px) - CAROUSEL
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .carousel-container {
+        min-height: 320px;
+    }
+
+    .carousel-slide {
+        padding: 40px 20px;
+    }
+
+    .carousel-number {
+        font-size: 11px;
+        margin-bottom: 15px;
+    }
+
+    .carousel-content h3 {
+        font-size: clamp(28px, 7vw, 42px);
+        margin-bottom: 20px;
+    }
+
+    .carousel-description {
+        font-size: 11px;
+        margin-bottom: 15px;
+    }
+
+    .carousel-handle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .carousel-button {
+        font-size: 10px;
+        padding: 10px 16px;
+    }
+
+    .carousel-nav {
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .dot.active {
+        width: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   PETIT MOBILE (jusqu'à 480px) - CAROUSEL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .carousel-container {
+        min-height: 280px;
+    }
+
+    .carousel-slide {
+        padding: 30px 16px;
+    }
+
+    .carousel-content h3 {
+        font-size: clamp(24px, 6vw, 36px);
+        margin-bottom: 16px;
+    }
+
+    .carousel-handle {
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+
+    .carousel-button {
+        font-size: 9px;
+        padding: 8px 12px;
+    }
+
+    .carousel-nav {
+        gap: 16px;
+        margin-top: 30px;
+    }
+
+}
