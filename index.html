@@ -136,74 +136,72 @@
 
     </div>
 
-    <div class="media-carousel">
+       <div class="ig-cycle" id="igCycle">
 
-        <div class="carousel-container">
+        <a class="ig-handle" id="igHandle" href="https://www.instagram.com/trail.hard/" target="_blank" rel="noopener">
+            @trail.hard
+        </a>
 
-            <!-- Slide 1: TRAIL HARD -->
-            <div class="carousel-slide active">
-                <div class="carousel-content">
-                    <span class="carousel-number">01</span>
-                    <h3>TRAIL<br>HARD</h3>
-                    <p class="carousel-description">
-                        TRAIL RUNNING · OUTDOOR · AVENTURE
-                    </p>
-                    <p class="carousel-handle">@trail.hard</p>
-                    <a href="https://www.instagram.com/trail.hard/" target="_blank" class="carousel-button">
-                        Visiter sur Instagram
-                    </a>
-                </div>
-            </div>
-
-            <!-- Slide 2: RUN HARD -->
-            <div class="carousel-slide">
-                <div class="carousel-content">
-                    <span class="carousel-number">02</span>
-                    <h3>RUN<br>HARD</h3>
-                    <p class="carousel-description">
-                        RUNNING · PERFORMANCE · CULTURE
-                    </p>
-                    <p class="carousel-handle">@run.hard_</p>
-                    <a href="https://www.instagram.com/run.hard_/" target="_blank" class="carousel-button">
-                        Visiter sur Instagram
-                    </a>
-                </div>
-            </div>
-
-            <!-- Slide 3: CYCLING HARD -->
-            <div class="carousel-slide">
-                <div class="carousel-content">
-                    <span class="carousel-number">03</span>
-                    <h3>CYCLING<br>HARD</h3>
-                    <p class="carousel-description">
-                        CYCLISME · GRAVEL · AVENTURE
-                    </p>
-                    <p class="carousel-handle">@cycling.hard</p>
-                    <a href="https://www.instagram.com/cycling.hard/" target="_blank" class="carousel-button">
-                        Visiter sur Instagram
-                    </a>
-                </div>
-            </div>
-
+        <div class="ig-photos" id="igPhotos">
+            <figure class="ig-photo" style="background-image:url('images/trail-1.jpg')"><figcaption>Trail Hard</figcaption></figure>
+            <figure class="ig-photo" style="background-image:url('images/trail-2.jpg')"><figcaption>Trail Hard</figcaption></figure>
+            <figure class="ig-photo" style="background-image:url('images/trail-3.jpg')"><figcaption>Trail Hard</figcaption></figure>
         </div>
 
-        <!-- Carousel Navigation -->
-        <div class="carousel-nav">
-            <button class="carousel-prev" aria-label="Précédent">←</button>
-            
-            <div class="carousel-dots">
-                <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
-                <button class="dot" data-slide="1" aria-label="Slide 2"></button>
-                <button class="dot" data-slide="2" aria-label="Slide 3"></button>
-            </div>
-            
-            <button class="carousel-next" aria-label="Suivant">→</button>
+        <div class="ig-dots" id="igDots">
+            <span class="ig-dot active"></span>
+            <span class="ig-dot"></span>
+            <span class="ig-dot"></span>
         </div>
 
     </div>
 
-</section>
+    <script>
+        (function () {
+            var medias = [
+                { handle: "@trail.hard", url: "https://www.instagram.com/trail.hard/", caption: "Trail Hard",
+                  images: ["images/trail-1.jpg", "images/trail-2.jpg", "images/trail-3.jpg"] },
+                { handle: "@cycling.hard", url: "https://www.instagram.com/cycling.hard/", caption: "Cycling Hard",
+                  images: ["images/cycling-1.jpg", "images/cycling-2.jpg", "images/cycling-3.jpg"] },
+                { handle: "@run.hard_", url: "https://www.instagram.com/run.hard_/", caption: "Run Hard",
+                  images: ["images/running-1.jpg", "images/running-2.jpg", "images/running-3.jpg"] }
+            ];
 
+            var handleEl = document.getElementById("igHandle");
+            var photosEl = document.getElementById("igPhotos");
+            var dotsEl = document.getElementById("igDots");
+            var photoEls = photosEl ? photosEl.querySelectorAll(".ig-photo") : [];
+            var dotEls = dotsEl ? dotsEl.querySelectorAll(".ig-dot") : [];
+            var current = 0;
+            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            function applyMedia(index) {
+                var media = medias[index];
+                handleEl.textContent = media.handle;
+                handleEl.href = media.url;
+                photoEls.forEach(function (el, i) {
+                    el.style.backgroundImage = "url('" + media.images[i] + "')";
+                    el.querySelector("figcaption").textContent = media.caption;
+                });
+                dotEls.forEach(function (dot, i) { dot.classList.toggle("active", i === index); });
+            }
+
+            function goToNext() {
+                var group = document.getElementById("igCycle");
+                group.classList.add("is-fading");
+                window.setTimeout(function () {
+                    current = (current + 1) % medias.length;
+                    applyMedia(current);
+                    group.classList.remove("is-fading");
+                }, reduceMotion ? 0 : 300);
+            }
+
+            if (handleEl && photoEls.length && !reduceMotion) {
+                window.setInterval(goToNext, 3000);
+            }
+        })();
+    </script>
+</section>
 
 <!-- =========================================================
      MANIFESTO
