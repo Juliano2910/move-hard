@@ -304,166 +304,81 @@ a {
     color: white;
 }
 
-.media-section .section-number {
-    color: #aaa;
+.media-section .section-number { color: #aaa; }
+.media-section .section-description { color: #aaa; }
+
+.ig-cycle { width: 100%; text-align: center; }
+
+.ig-handle {
+    display: block;
+    margin: 0 auto 50px;
+    font-size: clamp(48px, 9vw, 110px);
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 0.95;
+    color: white;
+    transition: opacity 0.3s ease;
 }
 
-.media-section .section-description {
-    color: #aaa;
-}
+.ig-cycle.is-fading .ig-handle,
+.ig-cycle.is-fading .ig-photo figcaption { opacity: 0; }
 
-.media-carousel {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
+.ig-photos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-.carousel-container {
+.ig-photo {
     position: relative;
-    width: 100%;
-    min-height: 400px;
+    aspect-ratio: 4 / 5;
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
     overflow: hidden;
 }
 
-.carousel-slide {
+.ig-photo::after {
+    content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.6s ease-in-out;
-    padding: 60px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 45%);
 }
 
-.carousel-slide.active {
-    opacity: 1;
-    position: relative;
-}
-
-.carousel-content {
-    text-align: left;
-    width: 100%;
-}
-
-.carousel-number {
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: var(--accent);
-    display: block;
-    margin-bottom: 20px;
-}
-
-.carousel-content h3 {
-    font-size: clamp(48px, 8vw, 80px);
-    line-height: 0.9;
-    letter-spacing: -3px;
-    font-weight: 900;
-    margin-bottom: 30px;
-    color: white;
-}
-
-.carousel-description {
+.ig-photo figcaption {
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+    z-index: 1;
     font-size: 13px;
     font-weight: 700;
-    letter-spacing: 1px;
-    color: #aaa;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-}
-
-.carousel-handle {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--accent);
-    margin-bottom: 30px;
-}
-
-.carousel-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 15px;
-    padding: 12px 25px;
-    border: 1px solid var(--accent);
-    border-radius: 2px;
-    color: var(--accent);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-}
-
-.carousel-button:hover {
-    background: var(--accent);
-    color: var(--black);
-    transform: translateX(4px);
-}
-
-
-/* =========================================================
-   CAROUSEL NAVIGATION
-========================================================= */
-
-.carousel-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 50px;
-}
-
-.carousel-prev,
-.carousel-next {
-    width: 40px;
-    height: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 2px;
-    background: transparent;
+    letter-spacing: 0.3px;
     color: white;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.ig-dots {
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.carousel-prev:hover,
-.carousel-next:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: rgba(223, 255, 0, 0.05);
-}
-
-.carousel-dots {
-    display: flex;
     gap: 12px;
-    align-items: center;
+    margin-top: 40px;
 }
 
-.dot {
-    width: 10px;
-    height: 10px;
+.ig-dot {
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.2);
-    border: none;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.dot.active {
-    background: var(--accent);
-    width: 28px;
-    border-radius: 5px;
-}
-
-.dot:hover {
-    background: rgba(255, 255, 255, 0.4);
+.ig-dot.active {
+    width: 22px;
+    border-radius: 4px;
+    background: white;
 }
 
 
@@ -882,12 +797,11 @@ a {
 
 @media (max-width: 1024px) {
     
-    .carousel-content h3 {
-        font-size: clamp(36px, 6vw, 60px);
+    .ig-handle {
+        font-size: clamp(36px, 8vw, 72px);
+        margin-bottom: 36px;
     }
-
 }
-
 
 /* =========================================================
    MOBILE (jusqu'à 800px)
@@ -1021,63 +935,26 @@ a {
     }
 
 
-    /* ================== CAROUSEL ================== */
+      /* ================== NOS MEDIAS ================== */
 
-    .carousel-container {
-        min-height: 320px;
+    .ig-handle {
+        font-size: clamp(30px, 9vw, 46px);
+        margin-bottom: 28px;
     }
 
-    .carousel-slide {
-        padding: 40px 20px;
+    .ig-photos {
+        grid-template-columns: 1fr;
+        gap: 14px;
     }
 
-    .carousel-number {
-        font-size: 11px;
-        margin-bottom: 15px;
+    .ig-photo {
+        aspect-ratio: 16 / 10;
     }
 
-    .carousel-content h3 {
-        font-size: clamp(28px, 7vw, 42px);
-        margin-bottom: 20px;
+    .ig-dots {
+        margin-top: 24px;
     }
-
-    .carousel-description {
-        font-size: 11px;
-        margin-bottom: 15px;
-    }
-
-    .carousel-handle {
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-
-    .carousel-button {
-        font-size: 10px;
-        padding: 10px 16px;
-    }
-
-    .carousel-nav {
-        gap: 20px;
-        margin-top: 40px;
-    }
-
-    .carousel-prev,
-    .carousel-next {
-        width: 32px;
-        height: 32px;
-        font-size: 14px;
-    }
-
-    .dot {
-        width: 8px;
-        height: 8px;
-    }
-
-    .dot.active {
-        width: 20px;
-    }
-
-
+   
     /* ================== MANIFESTO ================== */
 
     .manifesto {
