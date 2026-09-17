@@ -41,6 +41,7 @@ a {
     --grey: #777;
     --border: rgba(17, 17, 17, 0.18);
     --accent: #dfff00;
+    --accent-dark: #7a9d00;
 }
 
 
@@ -76,7 +77,7 @@ a {
 }
 
 .logo span {
-    color: var(--accent);
+      color: var(--accent-dark);
 }
 
 .desktop-nav {
@@ -298,14 +299,6 @@ a {
 /* =========================================================
    MEDIA CAROUSEL
 ========================================================= */
-
-.media-section {
-    background: var(--black);
-    color: white;
-}
-
-.media-section .section-number { color: #aaa; }
-.media-section .section-description { color: #aaa; }
 
 .ig-cycle { width: 100%; text-align: center; }
 
@@ -649,15 +642,12 @@ a {
 
 .cta {
     min-height: 850px;
-
-    background: var(--black);
-
-    color: white;
-
+    background: var(--white);
+    color: var(--black);
     padding: 120px 5vw;
-
     display: flex;
     align-items: center;
+    border-top: 1px solid var(--border);
 }
 
 .cta-content {
@@ -709,11 +699,10 @@ a {
 ========================================================= */
 
 .footer {
-    background: var(--black);
-
-    color: white;
-
+    background: var(--white);
+    color: var(--black);
     padding: 50px 5vw 35px;
+    border-top: 1px solid var(--border);
 }
 
 .footer-top {
@@ -723,7 +712,7 @@ a {
 
     padding-bottom: 50px;
 
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid var(--border);
 }
 
 .footer-logo {
@@ -1116,7 +1105,7 @@ a {
         display: inline-flex;
         align-items: center;
         gap: 20px;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid var(--black);
         padding-bottom: 10px;
         font-size: 11px;
         font-weight: 700;
@@ -1311,4 +1300,15 @@ a {
         font-size: 18px;
     }
 
+}
+
+.section-header-solo {
+    margin-bottom: 60px;
+}
+
+.section-title-big {
+    font-size: clamp(40px, 6vw, 90px);
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 1;
 }
