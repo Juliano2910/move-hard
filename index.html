@@ -138,71 +138,90 @@
 
     </div>
 
-       <div class="ig-cycle" id="igCycle">
+         <!-- 3 CARTES MÉDIAS -->
+    <div class="media-cards-grid">
 
-        <a class="ig-handle" id="igHandle" href="https://www.instagram.com/trail.hard/" target="_blank" rel="noopener">
-            @trail.hard
+        <a class="media-card mc-trail" href="https://www.instagram.com/trail.hard/" target="_blank" rel="noopener">
+            <div class="mc-mockup"><!-- photo/mockup Trail Hard --></div>
+            <h3>TRAIL HARD</h3>
+            <p>Trail running · Outdoor · Aventure</p>
+            <span class="mc-handle">@trail.hard →</span>
         </a>
 
-        <div class="ig-photos" id="igPhotos">
-            <figure class="ig-photo" style="background-image:url('trail-1.jpg')"><figcaption>Trail Hard</figcaption></figure>
-            <figure class="ig-photo" style="background-image:url('trail-2.jpg')"><figcaption>Trail Hard</figcaption></figure>
-            <figure class="ig-photo" style="background-image:url('trail-3.jpg')"><figcaption>Trail Hard</figcaption></figure>
-        </div>
+        <a class="media-card mc-run" href="https://www.instagram.com/run.hard_/" target="_blank" rel="noopener">
+            <div class="mc-mockup"><!-- photo/mockup Run Hard --></div>
+            <h3>RUN HARD</h3>
+            <p>Running · Performance · Culture</p>
+            <span class="mc-handle">@run.hard_ →</span>
+        </a>
 
-        <div class="ig-dots" id="igDots">
-            <span class="ig-dot active"></span>
-            <span class="ig-dot"></span>
-            <span class="ig-dot"></span>
+        <a class="media-card mc-cycling" href="https://www.instagram.com/cycling.hard/" target="_blank" rel="noopener">
+            <div class="mc-mockup"><!-- photo/mockup Cycling Hard --></div>
+            <h3>CYCLING HARD</h3>
+            <p>Cyclisme · Gravel · Aventure</p>
+            <span class="mc-handle">@cycling.hard →</span>
+        </a>
+
+    </div>
+
+
+    <!-- CONTENU À LA UNE -->
+    <div class="featured-content">
+
+        <div class="fc-media"><!-- image ou vidéo du contenu phare --></div>
+
+        <div class="fc-text">
+            <p class="small-label">CONTENU À LA UNE</p>
+            <h2>Titre du contenu que tu veux mettre en avant</h2>
+            <p>
+                Décris ici le contenu phare : un reel qui a cartonné,
+                une story d'athlète, une couverture d'événement.
+            </p>
+            <a href="#" class="outline-button">
+                Découvrir <span>↗</span>
+            </a>
         </div>
 
     </div>
 
-    <script>
-        (function () {
-            var medias = [
-                { handle: "@trail.hard", url: "https://www.instagram.com/trail.hard/", caption: "Trail Hard",
-                  images: ["trail-1.jpg", "trail-2.jpg", "trail-3.jpg"] },
-                { handle: "@cycling.hard", url: "https://www.instagram.com/cycling.hard/", caption: "Cycling Hard",
-                  images: ["cycling-1.jpg", "cycling-2.jpg", "cycling-3.jpg"] },
-                { handle: "@run.hard", url: "https://www.instagram.com/run.hard_/", caption: "Run Hard",
-                  images: ["running-1.jpg", "running-2.jpg", "running-3.jpg"] }
-            ];
 
-            var handleEl = document.getElementById("igHandle");
-            var photosEl = document.getElementById("igPhotos");
-            var dotsEl = document.getElementById("igDots");
-            var photoEls = photosEl ? photosEl.querySelectorAll(".ig-photo") : [];
-            var dotEls = dotsEl ? dotsEl.querySelectorAll(".ig-dot") : [];
-            var current = 0;
-            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    <!-- DERNIÈRES PUBLICATIONS PAR MÉDIA -->
+    <div class="media-rows">
 
-            function applyMedia(index) {
-                var media = medias[index];
-                handleEl.textContent = media.handle;
-                handleEl.href = media.url;
-                photoEls.forEach(function (el, i) {
-                    el.style.backgroundImage = "url('" + media.images[i] + "')";
-                    el.querySelector("figcaption").textContent = media.caption;
-                });
-                dotEls.forEach(function (dot, i) { dot.classList.toggle("active", i === index); });
-            }
+        <div class="media-row">
+            <div class="media-row-head mc-trail"><span>Trail Hard</span></div>
+            <div class="media-row-strip">
+                <div class="media-tile"></div>
+                <div class="media-tile"></div>
+                <div class="media-tile"></div>
+                <div class="media-tile"></div>
+                <div class="media-tile"></div>
+            </div>
+        </div>
 
-            function goToNext() {
-                var group = document.getElementById("igCycle");
-                group.classList.add("is-fading");
-                window.setTimeout(function () {
-                    current = (current + 1) % medias.length;
-                    applyMedia(current);
-                    group.classList.remove("is-fading");
-                }, reduceMotion ? 0 : 300);
-            }
+        <div class="media-row">
+            <div class="media-row-head mc-run"><span>Run Hard</span></div>
+            <div class="media-row-strip">
+                <div class="media-tile"></div>
+                <div class="media-tile"></div>
+                <div class="media-tile"></div>
+                <div class="media-tile"></div>
+                <div class="media-tile"></div>
+            </div>
+        </div>
 
-            if (handleEl && photoEls.length && !reduceMotion) {
-                window.setInterval(goToNext, 3000);
-            }
-        })();
-    </script>
+        <div class="media-row">
+            <div class="media-row-head mc-cycling"><span>Cycling Hard</span></div>
+            <div class="media-row-strip">
+                <div class="media-tile"></div>
+                <div class="media-tile"></div>
+                <div class="media-tile"></div>
+                <div class="media-tile"></div>
+                <div class="media-tile"></div>
+            </div>
+        </div>
+
+    </div>
 </section>
 
 <!-- =========================================================
