@@ -410,6 +410,8 @@ a {
 
     border-radius: 4px;
     background: rgba(0,0,0,0.15);
+
+    overflow: hidden;
 }
 
 .media-card h3 {
