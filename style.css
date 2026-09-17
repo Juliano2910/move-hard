@@ -621,6 +621,22 @@ a {
     border-right: none;
 }
 
+.numbers-standalone {
+    padding: 60px 5vw 130px;
+}
+
+.numbers-standalone .numbers-grid {
+    gap: 50px;
+}
+
+.numbers-standalone .number-item strong {
+    font-size: clamp(64px, 9vw, 130px);
+}
+
+.numbers-standalone .number-item p {
+    font-size: 12px;
+    margin-top: 8px;
+}
 
 /* =========================================================
    SERVICES
