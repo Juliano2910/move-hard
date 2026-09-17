@@ -40,8 +40,8 @@ a {
     --white: #f4f3ef;
     --grey: #777;
     --border: rgba(17, 17, 17, 0.18);
-    --accent: #dfff00;
-    --accent-dark: #7a9d00;
+    --accent: #38b6ff;
+    --accent-dark: #1c7fbf;
 }
 
 
@@ -400,9 +400,9 @@ a {
     transform: translateY(-6px);
 }
 
-.mc-trail   { background: #1f6f43; color: white; }
-.mc-run     { background: var(--accent); color: #111; }
-.mc-cycling { background: #2d5fe0; color: white; }
+.mc-trail   { background: #fd5b00; color: white; }
+.mc-run     { background: #5dff36; color: #111; }
+.mc-cycling { background: #ffff05; color: #111; }
 
 .mc-mockup {
     aspect-ratio: 3 / 4;
