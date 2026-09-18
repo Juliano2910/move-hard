@@ -807,6 +807,10 @@ a {
     letter-spacing: -1px;
 }
 
+ .desktop-nav {
+    display: none;
+    }
+
 .menu-button {
     font-size: 10px;
     padding: 9px 14px;
